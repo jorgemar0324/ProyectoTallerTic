@@ -3,8 +3,44 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    body{
+        background: #808080;
+        background: linear-gradient(to right, #808080,#ffff);
+    }
+    .bg{
+        background-image: url(../images/img1.jpg);
+        background-position: center center;
+    }
+</style>
+<div class="container w-90 mt-5 rounded shadow">
+    <div class="row aling-items-stretch">
+        <div class="col bg">
+        
+        </div>
+        <div class="col bd">
+            <div class="text-end">
+                <img src="images\Logo.png" asp-append-version="true" width="60 " alt="Logo">
+            </div>
+            <h2 class="fw.bold text-center py-5">Bienvenido</h2>
+            <div class="mb-4">
+                <label for="email" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="mb-4">
+                <label for="pass" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="pass">
+            </div>
+            <div class="mb-4 form-check">
+                <input type="checkbox" name="connected" class="form-check-input">
+                <label for="connected" class="form.check-label">Mantenerme Conectado</label>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-outline-primary w-100 my-1">Iniciar Seción</button>
+            </div>
+            <div class="my-3">
+                <span>No Tienes Cuenta? <a href="#">Registrate</a></span>
+            </div>
+        </div>
+    </div>
 </div>
