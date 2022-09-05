@@ -5,24 +5,26 @@
 }
 <style>
     body{
-        background: #808080;
-        background: linear-gradient(to right, #808080,#ffff);
+        background: #004aad;
+        background: linear-gradient(to left, #004aad,#cdd6ff);
     }
     .bg{
-        background-image: url(../images/img1.jpg);
+        background-image: url(../images/login.png);
         background-position: center center;
+        background-size: cover;
+        border-radius: 5px;
+    }
+    .bord{
+        border-radius: 5px;
     }
 </style>
 <div class="container w-90 mt-5 rounded shadow">
-    <div class="row aling-items-stretch">
-        <div class="col bg">
-        
-        </div>
-        <div class="col bd">
-            <div class="text-end">
-                <img src="images\Logo.png" asp-append-version="true" width="60 " alt="Logo">
+    <div class="row">
+        <div class="col bd py-5" >
+        <div class="text-end">
+                <img class="bord" src="images\Logo.png" asp-append-version="true" width="60 " alt="Logo">
             </div>
-            <h2 class="fw.bold text-center py-5">Bienvenido</h2>
+            <h2 class="fw.bold text-center py-1">Bienvenido</h2>
             <div class="mb-4">
                 <label for="email" class="form-label">Correo Electronico</label>
                 <input type="email" class="form-control" name="email">
@@ -36,11 +38,14 @@
                 <label for="connected" class="form.check-label">Mantenerme Conectado</label>
             </div>
             <div class="d-grid">
-                <button type="submit" class="btn btn-outline-primary w-100 my-1">Iniciar Seción</button>
+                <button type="submit" class="btn btn-primary bg-gradient w-100 my-1">Iniciar Sesión</button>
             </div>
             <div class="my-3">
-                <span>No Tienes Cuenta? <a href="#">Registrate</a></span>
+                <span class="mb-4">No Tienes Cuenta? <a href="#">Registrate</a></span>
             </div>
+        </div>
+        <div class="col bg">
+            
         </div>
     </div>
 </div>
