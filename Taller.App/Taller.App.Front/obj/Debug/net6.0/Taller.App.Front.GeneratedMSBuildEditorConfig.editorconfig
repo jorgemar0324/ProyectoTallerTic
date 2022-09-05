@@ -15,16 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\ProyectoTallerTic\Taller.App\Taller.App.Front
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VlbnRhXFJlZ2lzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_ValidationScriptsPartial.cshtml]
