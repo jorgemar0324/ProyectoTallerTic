@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gCne4Q2dPh0o+ydiU0vLIGWCLC2EEFJ1m1bBqMXyPHU=",
+  "Hash": "md264E4AkUb+R6oA21yZt3l4J4eQAKyGRcluFxrBAa0=",
   "Source": "Taller.App.Front",
   "BasePath": "_content/Taller.App.Front",
   "Mode": "Default",
@@ -119,23 +119,6 @@
       "OriginalItemSpec": "wwwroot\\images\\2.png"
     },
     {
-      "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\2(1).png",
-      "SourceId": "Taller.App.Front",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\",
-      "BasePath": "_content/Taller.App.Front",
-      "RelativePath": "images/2(1).png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\2(1).png"
-    },
-    {
       "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\3.png",
       "SourceId": "Taller.App.Front",
       "SourceType": "Discovered",
@@ -151,23 +134,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\3.png"
-    },
-    {
-      "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\3(1).png",
-      "SourceId": "Taller.App.Front",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\",
-      "BasePath": "_content/Taller.App.Front",
-      "RelativePath": "images/3(1).png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\3(1).png"
     },
     {
       "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\4.png",
@@ -236,6 +202,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\7.png"
+    },
+    {
+      "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\8.png",
+      "SourceId": "Taller.App.Front",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\",
+      "BasePath": "_content/Taller.App.Front",
+      "RelativePath": "images/8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8.png"
+    },
+    {
+      "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\9.png",
+      "SourceId": "Taller.App.Front",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\",
+      "BasePath": "_content/Taller.App.Front",
+      "RelativePath": "images/9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9.png"
     },
     {
       "Identity": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\wwwroot\\images\\img1.jpg",
