@@ -2,3 +2,88 @@
 @model Taller.App.Front.Pages.RegistroModel
 @{
 }
+<style>
+    body {
+        background: #004aad;
+        background: linear-gradient(to left, #004aad, #cdd6ff);
+    }
+
+
+
+</style>
+
+<form class="form-horizontal">
+    <fieldset>
+
+
+        <legend>Registro Cliente</legend>
+
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Nombre">Nombre :</label>
+            <div class="col-md-4">
+                <input id="Nombre" name="Nombre" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Apellido">Apellido :</label>
+            <div class="col-md-4">
+                <input id="Apellido" name="Apellido" type="text" placeholder="" class="form-control input-md"
+                    required="">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="IDUsuario">Cedula :</label>
+            <div class="col-md-4">
+                <input id="IDUsuario" name="IDUsuario" type="text" placeholder="" class="form-control input-md"
+                    required="">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Ciudad">Ciudad :</label>
+            <div class="col-md-4">
+                <input id="Ciudad" name="Ciudad" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Telefono">Telefono :</label>
+            <div class="col-md-4">
+                <input id="Telefono" name="Telefono" type="text" placeholder="" class="form-control input-md"
+                    required="">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Direccion">Direccion :</label>
+            <div class="col-md-4">
+                <input id="Direccion" name="Direccion" type="text" placeholder="" class="form-control input-md"
+                    required="">
+            </div>
+        </div><br>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Contraseña">Asignar Contraseña :</label>
+            <div class="col-md-4">
+                <input id="Contraseña" name="Contraseña" type="password" placeholder="" class="form-control input-md">
+            </div>
+        </div><br>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="fecha">Fecha nacimiento :</label>
+            <div class="col-md-4">
+                <input id="fecha" name="fecha" type="date" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Correo">Correo electronico :</label>
+            <div class="col-md-4">
+                <input id="Correo" name="Correo" type="email" placeholder="" class="form-control input-md" required=""
+                    value="email@example.com">
+            </div>
+        </div><br>
+
+        <div class="col-md-4">
+            <button id="Guardar" name="Guardar" class="btn btn-success">Guardar</button>
+        </div>
+
+    </fieldset>
+</form>

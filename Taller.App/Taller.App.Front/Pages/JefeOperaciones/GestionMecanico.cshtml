@@ -1,14 +1,21 @@
 ﻿@page
-@model Taller.App.Front.pages.RegistroClienteModel
+@model Taller.App.Front.Pages.GestionMecanicoModel
 @{
 }
+<style>
+    body {
+        background: #004aad;
+        background: linear-gradient(to left, #004aad, #cdd6ff);
+    }
+
+</style>
 
 
 <form class="form-horizontal">
     <fieldset>
 
 
-        <legend>Registro Cliente</legend>
+        <legend>Registro Mecánico</legend>
 
 
         <div class="form-group">
@@ -53,6 +60,17 @@
         </div><br>
 
         <div class="form-group">
+            <label class="col-md-4 control-label" for="NivelEducativo">Nivel Educativo</label>
+            <div class="col-md-4">
+                <select id="NivelEducativo" name="NivelEducativo" class="form-control">
+                    <option value="1">Bachiller</option>
+                    <option value="2">Tecnico</option>
+                    <option value="3">Tecnologo</option>
+                </select>
+            </div>
+        </div><br>
+
+        <div class="form-group">
             <label class="col-md-4 control-label" for="Contraseña">Asignar Contraseña :</label>
             <div class="col-md-4">
                 <input id="Contraseña" name="Contraseña" type="password" placeholder="" class="form-control input-md">
@@ -72,6 +90,9 @@
                     value="email@example.com">
             </div>
         </div><br>
+        <div class="col-md-4">
+            <button id="Guardar" name="Guardar" class="btn btn-success">Guardar</button>
+        </div>
 
     </fieldset>
 </form>

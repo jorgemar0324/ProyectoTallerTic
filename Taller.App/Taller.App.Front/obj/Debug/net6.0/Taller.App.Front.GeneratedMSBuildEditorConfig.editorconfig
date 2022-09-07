@@ -8,41 +8,45 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Taller.App.Front
 build_property.RootNamespace = Taller.App.Front
-build_property.ProjectDir = C:\ProyectoTallerTic\Taller.App\Taller.App.Front\
+build_property.ProjectDir = C:\PROYECTO-C3\ProyectoTallerTic\Taller.App\Taller.App.Front\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\ProyectoTallerTic\Taller.App\Taller.App.Front
+build_property.MSBuildProjectDirectory = C:\PROYECTO-C3\ProyectoTallerTic\Taller.App\Taller.App.Front
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Registro.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VlbnRhXFJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Error.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Index.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/RegistroCliente.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionMecanico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXEdlc3Rpb25NZWNhbmljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/RegistroCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXFJlZ2lzdHJvQ2xpZW50ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/_ViewImports.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/_ViewStart.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_Layout.cshtml]
+[C:/PROYECTO-C3/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hvx31kelq3

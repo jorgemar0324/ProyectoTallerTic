@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\jorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+      "projectUniqueName": "C:\\PROYECTO-C3\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
       "projectName": "Taller.App.Front",
-      "projectPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\obj\\",
+      "projectPath": "C:\\PROYECTO-C3\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+      "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\PROYECTO-C3\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -49,7 +49,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
