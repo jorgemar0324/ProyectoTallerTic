@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jorge\Desktop\Proyecto Taller Tic\ProyectoTallerTic\Taller.App\Taller.App.Front
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/MisVehiculos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxNaXNWZWhpY3Vsb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Cliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VlbnRhXENsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
