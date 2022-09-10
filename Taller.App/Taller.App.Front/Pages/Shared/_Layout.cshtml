@@ -31,17 +31,24 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area=""
-                                asp-page="/Cuenta/RegistroUsuario">Registro Usuario</a>
+                                asp-page="/JefeOperaciones/InfoVehiculos">Registro de Vehiculos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area=""
-                                asp-page="/JefeOperaciones/InfoVehiculos">Informacion de Vehiculos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area=""
-                                asp-page="/JefeOperaciones/DetalleVehiculo">Detalle Vehiculo</a>
+                                asp-page="/JefeOperaciones/DetalleVehiculo">Consulta Vehiculos</a>
                         </li>
                     </ul>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Perfil
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-page="/Cuenta/Cliente">Cliente</a></li>
+                            <li><a class="dropdown-item" href="#">Mecánico</a></li>
+                            <li><a class="dropdown-item" href="#">Jefe Operaciones</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
