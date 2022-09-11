@@ -15,12 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jorge\Desktop\Proyecto Taller Tic\ProyectoTallerTic\Taller.App\Taller.App.Front
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/CitasCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxDaXRhc0NsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/MisVehiculos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxNaXNWZWhpY3Vsb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Cliente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VlbnRhXENsaWVudGUuY3NodG1s
+[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/NotificacionesCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxOb3RpZmljYWNpb25lc0NsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/SolicitarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxTb2xpY2l0YXJDaXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Registro.cshtml]
@@ -53,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/RegistroCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXFJlZ2lzdHJvQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Perfiles/Cliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsZXNcQ2xpZW50ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_ValidationScriptsPartial.cshtml]
