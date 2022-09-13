@@ -3,6 +3,13 @@
 @{
 }
 
+<style>
+    body {
+        background: #004aad;
+        background: linear-gradient(to left, #004aad, #cdd6ff);
+    }
+</style>
+
 <div class="container" aria-label="Basic example">
  
 <a asp-page="/Cliente/SolicitarCita" class="btn btn-primary" role="button">Solicitar Cita</a> 
@@ -11,4 +18,61 @@
 <a asp-page="/Cliente/NotificacionesCliente" class="btn btn-primary" role="button">Notificaciones</a> 
 
 
-<h3>Mis Citas</h3>
+
+
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-md-12">
+      <h3>Mis Citas</h3>
+      <div class="table-responsive">
+
+
+        <table id="mytable" class="table table-bordred table-striped">
+
+          <thead>
+            <th>Numero cita</th>
+            <th>Placa</th>
+            <th>Fecha/hora</th>
+            <th>Tipo Servicio</th>
+            <th>Ciudad-Sede</th>
+            <th>Mecanico</th>
+            <th>Observaciones</th>
+            <th>Estado</th>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>1234</td>
+              <td>AAB455</td>
+              <td>Ford</td>
+              <td>2012</td>
+              <td>5</td>
+              <td>1600</td>
+              <td>EEUU</td>
+            </tr>
+
+                        <tr>
+              <td>50935</td>
+              <td>ZCW451</td>
+              <td>Mazda</td>
+              <td>2021</td>
+              <td>5</td>
+              <td>2500</td>
+              <td>Japon</td>
+            </tr>
+
+
+
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
