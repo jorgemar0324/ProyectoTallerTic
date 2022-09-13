@@ -1,0 +1,80 @@
+﻿@page
+@model Taller.App.Front.Pages.Cliente.CitasClienteModel
+@{
+}
+
+<style>
+    body {
+        background: #004aad;
+        background: linear-gradient(to left, #004aad, #cdd6ff);
+    }
+</style>
+
+<div class="container" aria-label="Basic example">
+ 
+<a asp-page="/Cliente/SolicitarCita" class="btn btn-primary" role="button">Solicitar Cita</a> 
+<a asp-page="/Cliente/MisVehiculos" class="btn btn-primary" role="button">Mis Vehiculos</a> 
+<a asp-page="/Cliente/CitasCliente" class="btn btn-primary" role="button">Mis citas</a> 
+<a asp-page="/Cliente/NotificacionesCliente" class="btn btn-primary" role="button">Notificaciones</a> 
+
+
+
+
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-md-12">
+      <h4>Mis Citas</h4>
+      <div class="table-responsive">
+
+
+        <table id="mytable" class="table table-bordred table-striped">
+
+          <thead>
+            <th>Numero cita</th>
+            <th>Placa</th>
+            <th>Fecha/hora</th>
+            <th>Tipo Servicio</th>
+            <th>Ciudad-Sede</th>
+            <th>Mecanico</th>
+            <th>Observaciones</th>
+            <th>Estado</th>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>0014</td>
+              <td>AAB455</td>
+              <td>22-09-2022 10:00 AM</td>
+              <td>Reparación</td>
+              <td>Medellín</td>
+              <td>Pablo Perez</td>
+              <td></td>
+              <td>Pendiente</td>
+            </tr>
+
+                        <tr>
+              <td>0003</td>
+              <td>ZCW451</td>
+              <td>1-06-2022 9:00 AM</td>
+              <td>Lubricación</td>
+              <td>Medellín</td>
+              <td>Cambio Aceite y filtro</td>
+              <td>Roberto Martinez</td>
+              <td>Finalizado</td>
+            </tr>
+
+
+
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

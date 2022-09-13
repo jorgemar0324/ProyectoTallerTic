@@ -1,0 +1,85 @@
+﻿@page
+@model Taller.App.Front.Pages.Cliente.MisVehiculosModel
+@{
+}
+
+<style>
+    body {
+        background: #004aad;
+        background: linear-gradient(to left, #004aad, #cdd6ff);
+    }
+</style>
+
+<div class="container" aria-label="Basic example">
+ 
+<a asp-page="/Cliente/SolicitarCita" class="btn btn-primary" role="button">Solicitar Cita</a> 
+<a asp-page="/Cliente/MisVehiculos" class="btn btn-primary" role="button">Mis Vehiculos</a> 
+<a asp-page="/Cliente/CitasCliente" class="btn btn-primary" role="button">Mis citas</a> 
+<a asp-page="/Cliente/NotificacionesCliente" class="btn btn-primary" role="button">Notificaciones</a> 
+
+
+
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-md-12">
+      <h4>Mis Vehiculos</h4>
+      <div class="table-responsive">
+
+
+        <table id="mytable" class="table table-bordred table-striped">
+
+          <thead>
+            <th></th>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Pasajeros</th>
+            <th>Motor</th>
+            <th>Pais Origen</th>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td><input type="checkbox" class="checkthis" /></td>
+              <td>AAB455</td>
+              <td>Ford</td>
+              <td>2012</td>
+              <td>5</td>
+              <td>1600</td>
+              <td>EEUU</td>
+            </tr>
+
+                        <tr>
+              <td><input type="checkbox" class="checkthis" /></td>
+              <td>ZCW451</td>
+              <td>Mazda</td>
+              <td>2021</td>
+              <td>5</td>
+              <td>2500</td>
+              <td>Japon</td>
+            </tr>
+
+
+
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<br><div class="container">
+
+  <a href="#" class="btn btn-primary" role="button">Crear Vehiculo</a> 
+  <button type="button" class="btn btn-success">Editar</button>
+  <button type="button" class="btn btn-danger">Eliminar</button>
+
+
+</div>

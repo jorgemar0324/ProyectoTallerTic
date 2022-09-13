@@ -1,0 +1,84 @@
+﻿@page
+@model Taller.App.Front.Pages.Cliente.SolicitarCitaModel
+@{
+}
+
+<style>
+    body {
+        background: #004aad;
+        background: linear-gradient(to left, #004aad, #cdd6ff);
+    }
+</style>
+
+
+<div class="container" aria-label="Basic example">
+
+  <a asp-page="/Cliente/SolicitarCita" class="btn btn-primary" role="button">Solicitar Cita</a>
+  <a asp-page="/Cliente/MisVehiculos" class="btn btn-primary" role="button">Mis Vehiculos</a>
+  <a asp-page="/Cliente/CitasCliente" class="btn btn-primary" role="button">Mis citas</a>
+  <a asp-page="/Cliente/NotificacionesCliente" class="btn btn-primary" role="button">Notificaciones</a>
+
+
+  <form> <br>
+
+    <h4>Solicitar Cita</h4><br>
+    <fieldset>
+
+      <div class="form-group row">
+        <label class="col-md-2 control-label" for="Placa">Placa Vehiculo :</label>
+        <div class="col-md-4">
+          <select class="form-control">
+            <option></option>
+          </select>
+        </div>
+      </div><br>
+
+      <div class="form-group row">
+        <label class="col-md-2 control-label">Fecha y Hora :</label>
+        <div class="col-md-4">
+          <input id="Cita" type="datetime-local" class="form-control input-md" required="">
+        </div>
+      </div><br>
+
+      <div class="form-group row">
+        <label class="col-md-2 control-label" for="Ciudad">Tipo Servicio :</label>
+        <div class="col-md-4">
+          <select class="form-control">
+            <option>Revisión</option>
+            <option>Reparación</option>
+            <option>Lubricación</option>
+          </select>
+        </div>
+      </div><br>
+
+      <div class="form-group row">
+        <label class="col-md-2 control-label" for="Ciudad">Ciudad-Sede :</label>
+        <div class="col-md-4">
+          <select class="form-control">
+            <option>Armenia</option>
+            <option>Barranquilla</option>
+            <option>Bogotá</option>
+            <option>Cali</option>
+            <option>Manizales</option>
+            <option>Medellín</option>
+            <option>Pasto</option>
+            <option>Pereira</option>
+          </select>
+        </div>
+      </div><br>
+
+      <div class="form-group row">
+        <label class="col-md-2 control-label">Descripcion Servicio :</label>
+        <div class="col-md-4">
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+      </div><br>
+
+      <div class="form-group ">
+            <button  id="Guardar" name="Guardar" class="btn btn-success">Solicitar Cita</button>
+        </div>
+
+
+
+    </fieldset>
+  </form>
