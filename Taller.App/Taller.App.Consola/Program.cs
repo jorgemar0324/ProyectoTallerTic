@@ -16,7 +16,9 @@ namespace Taller.App.Consola
         static void Main(string[] args)
         {
             //AgregarMecanico();
-            ObtenerMecanicos();
+            //ObtenerMecanicos();
+            //BuscarMecanico("8");
+            EliminarMecanico("1");
         }
 
         static void AgregarMecanico()
@@ -44,6 +46,24 @@ namespace Taller.App.Consola
                 Console.WriteLine("Nombre "+ m.Nombre + "\nTelefono "+ m.Telefono);
                 Console.WriteLine("---------------------");
             }
+        }
+
+        static void BuscarMecanico(string Id)
+        {
+            var m = Repositorio.BuscarMecanico(Id);
+            if(m != null)
+            {
+                Console.WriteLine("Se encontró " + m.Nombre +" "+ m.Apellido + "\n de "+ m.Ciudad);
+            }
+            else
+            {
+                Console.WriteLine("No se encontró");
+            }
+        }
+
+        static void EliminarMecanico(string Id)
+        {
+            Repositorio.EliminarMecanico(Id);
         }
     }
 
