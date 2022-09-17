@@ -13,13 +13,30 @@ namespace Taller.App.Consola
             new Persistencia.AppRepositorios.AppContex()
         );
 
+        private static RepositorioPropietario RepositorioPropietario = new RepositorioPropietario
+        (
+            new Persistencia.AppRepositorios.AppContex()
+        );
+
+        private static RepositorioVehiculo RepositorioVehiculo = new RepositorioVehiculo
+        (
+            new Persistencia.AppRepositorios.AppContex()
+        );
+
         static void Main(string[] args)
         {
             //AgregarMecanico();
             //ObtenerMecanicos();
             //BuscarMecanico("8");
-            EliminarMecanico("1");
+            //EliminarMecanico("1");
+            //AgregarPropietario();
+            //ObtenerPropietarios();
+            //BuscarPropietario("2");
+            //EliminarPropietario("2");
         }
+
+
+        // CRUD MECANICO
 
         static void AgregarMecanico()
         {
@@ -65,6 +82,57 @@ namespace Taller.App.Consola
         {
             Repositorio.EliminarMecanico(Id);
         }
+
+        // CRUD DEL PROPIETARIO
+
+         static void AgregarPropietario()
+         {
+            var propietario = new Propietario
+            {
+                Id = "2",
+                Nombre = "Sandra",
+                Apellido ="Gonzales",
+                Telefono = "30177742323",
+                FechaNacimiento = new DateTime(1987,11,22),
+                Correo ="gmail",
+                Contrasenia = "SG45",
+                Ciudad = "Ibague",
+                Direccion = "Av Caracas",
+            };
+            RepositorioPropietario.AgregarPropietario(propietario);
+         }
+
+         static void ObtenerPropietarios()
+        {
+            foreach (var p in RepositorioPropietario.ObtenerPropietario())
+            {
+                Console.WriteLine("-------------------");
+                Console.WriteLine("Nombre "+ p.Nombre + "\nTelefono "+ p.Telefono);
+                Console.WriteLine("---------------------");
+            }
+        }
+
+        static void BuscarPropietario(string Id)
+        {
+            var p = RepositorioPropietario.BuscarPropietario(Id);
+            if(p!= null)
+            {
+                Console.WriteLine("Se encontró " + p.Nombre +" "+ p.Apellido + "\n de "+ p.Ciudad);
+            }
+            else
+            {
+                Console.WriteLine("No se encontró");
+            }
+        }
+
+        static void EliminarPropietario(string Id)
+        {
+            RepositorioPropietario.EliminarPropietario(Id);
+        }
+
+        // CRUD VEHICULO
+
+
     }
 
 
