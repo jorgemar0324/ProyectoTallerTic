@@ -35,7 +35,7 @@ namespace Taller.App.Persistencia.Repositorios
             }
             catch (System.Exception)
             {
-                Console.WriteLine("Exepcion");
+                Console.WriteLine("No se ha encontrado Mecanico" + Id);
                 return null;
                 throw;
             }
@@ -51,7 +51,7 @@ namespace Taller.App.Persistencia.Repositorios
                 {
                     this.appContex.Mecanicos.Remove(mecanico);
                     this.appContex.SaveChanges();
-                    Console.WriteLine("Se Eliminó con exito");
+                    Console.WriteLine("Se Eliminó Mecanico "+Id+" con exito");
                 }
             }
             catch (System.Exception)
