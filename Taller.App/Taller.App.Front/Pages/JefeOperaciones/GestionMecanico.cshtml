@@ -3,90 +3,177 @@
 @{
 }
 
+<div class="container" aria-label="Basic example">
+
+    <a class="btn btn-primary" role="button">Control citas</a>
+    <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionMecanico">Gestion Mecanicos</a>
+    <a class="btn btn-primary" role="button">Gestion Vehiculos</a>
+    <a class="btn btn-primary" role="button">Notificaciones</a>
+
+    <div><br>
+        <h4>Mecánicos</h4>
+    </div>
+</div><br>
 
 
-<form class="form-horizontal">
-    <fieldset>
+<div class="container">
+    <div class="row">
 
+        <table class="table table-bordred table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Fecha Nacimiento</th>
+                    <th scope="col">Nivel Academico</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>75342233</td>
+                    <td>Andres Felipe</td>
+                    <td>Osa Ruiz</td>
+                    <td>Cali</td>
+                    <td>3008704565</td>
+                    <td>afosa@gmail.com</td>
+                    <td>22-10-1991</td>
+                    <td>Tecnico</td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-warning"><span
+                                    class="glyphicon glyphicon-pencil"></span>Editar</a>
+                            <a href="#" class="btn btn-danger"><span
+                                    class="glyphicon glyphicon-pencil"></span>Eliminar</a>
+                        </div>
+                    <td>
 
-        <legend>Registro Mecánico</legend>
+                </tr>
+                <tr>
+                    <td>76455934</td>
+                    <td>Pablo</td>
+                    <td>Perez Ruiz</td>
+                    <td>Medellín</td>
+                    <td>3107886523</td>
+                    <td>pperez@gmail.com</td>
+                    <td>02-02-1985</td>
+                    <td>Tecnólogo</td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-warning"><span
+                                    class="glyphicon glyphicon-pencil"></span>Editar</a>
+                            <a href="#" class="btn btn-danger"><span
+                                    class="glyphicon glyphicon-pencil"></span>Eliminar</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><br><br><br>
 
+<div>
+    <h5>Registrar Nuevo Mecanico</h5><br>
+</div><br>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Nombre">Nombre :</label>
-            <div class="col-md-4">
-                <input id="Nombre" name="Nombre" type="text" class="form-control input-md" required="">
-            </div>
-        </div><br>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Apellido">Apellido :</label>
-            <div class="col-md-4">
-                <input id="Apellido" name="Apellido" type="text" placeholder="" class="form-control input-md"
-                    required="">
-            </div>
-        </div><br>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="IDUsuario">Cedula :</label>
-            <div class="col-md-4">
-                <input id="IDUsuario" name="IDUsuario" type="text" placeholder="" class="form-control input-md"
-                    required="">
-            </div>
-        </div><br>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Ciudad">Ciudad :</label>
-            <div class="col-md-4">
-                <input id="Ciudad" name="Ciudad" type="text" placeholder="" class="form-control input-md" required="">
-            </div>
-        </div><br>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Telefono">Telefono :</label>
-            <div class="col-md-4">
-                <input id="Telefono" name="Telefono" type="text" placeholder="" class="form-control input-md"
-                    required="">
-            </div>
-        </div><br>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Direccion">Direccion :</label>
-            <div class="col-md-4">
-                <input id="Direccion" name="Direccion" type="text" placeholder="" class="form-control input-md"
-                    required="">
-            </div>
-        </div><br>
+<form>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="NivelEducativo">Nivel Educativo</label>
-            <div class="col-md-4">
-                <select id="NivelEducativo" name="NivelEducativo" class="form-control">
-                    <option value="1">Bachiller</option>
-                    <option value="2">Tecnico</option>
-                    <option value="3">Tecnologo</option>
-                </select>
+    <div class="mb-3 row">
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Id Mecanico :</label>
+            <div class="col">
+                <input type="number" class="form-control" required="">
             </div>
-        </div><br>
-
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Contraseña">Asignar Contraseña :</label>
-            <div class="col-md-4">
-                <input id="Contraseña" name="Contraseña" type="password" placeholder="" class="form-control input-md">
-            </div>
-        </div><br>
-
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="fecha">Fecha nacimiento :</label>
-            <div class="col-md-4">
-                <input id="fecha" name="fecha" type="date" placeholder="" class="form-control input-md" required="">
-            </div>
-        </div><br>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="Correo">Correo electronico :</label>
-            <div class="col-md-4">
-                <input id="Correo" name="Correo" type="email" placeholder="" class="form-control input-md" required=""
-                    value="email@example.com">
-            </div>
-        </div><br>
-        <div class="col-md-4">
-            <button id="Guardar" name="Guardar" class="btn btn-success">Guardar</button>
         </div>
 
-    </fieldset>
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Nombres :</label>
+            <div class="col">
+                <input type="text" class="form-control" required="">
+            </div>
+        </div>
+
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Apellidos :</label>
+            <div class="col">
+                <input type="text" class="form-control" required="">
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Ciudad :</label>
+            <div class="col">
+                <select class="form-control">
+                    <option>Armenia</option>
+                    <option>Barranquilla</option>
+                    <option>Bogotá</option>
+                    <option>Cali</option>
+                    <option>Manizales</option>
+                    <option>Medellín</option>
+                    <option>Pasto</option>
+                    <option>Pereira</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Teléfono :</label>
+            <div class="col">
+                <input type="number" class="form-control" required="">
+            </div>
+        </div>
+
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Correo :</label>
+            <div class="col">
+                <input type="email" class="form-control" required="" value="email@example.com">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mb-3 row">
+
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Fecha Nacimiento :</label>
+            <div class="col">
+                <input type="date" class="form-control" required="">
+            </div>
+        </div>
+
+        <div class="col">
+            <label class="col-md-4 control-label" for="Nombre">Nivel Academico :</label>
+            <div class="col">
+                <select class="form-control">
+                    <option>Bachiller</option>
+                    <option>Técnico</option>
+                    <option>Tecnólogo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col">
+            <label class="col" for="Nombre">Asignar Contraseña :</label>
+            <div class="col">
+                <input type="password" class="form-control" required="">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
 </form>
+
+<br>
+<div class="container">
+    <a Href="#" class="btn btn-success" role="button">Guardar</a>
+</div>
