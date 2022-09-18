@@ -1,29 +1,34 @@
 ﻿@page
-@model Taller.App.Front.Pages.Cliente.MisVehiculosModel
+@model Taller.App.Front.Pages.JefeOperaciones.GestionVehiculosModel
 @{
 }
 
-
-
 <div class="container" aria-label="Basic example">
 
-  <a asp-page="/Cliente/SolicitarCita" class="btn btn-primary" role="button">Solicitar Cita</a>
-  <a asp-page="/Cliente/MisVehiculos" class="btn btn-primary" role="button">Mis Vehiculos</a>
-  <a asp-page="/Cliente/CitasCliente" class="btn btn-primary" role="button">Mis citas</a>
-  <a asp-page="/Cliente/NotificacionesCliente" class="btn btn-primary" role="button">Notificaciones</a>
+  <a class="btn btn-primary" role="button">Control citas</a>
+  <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionClientes">Gestión Clientes</a>
+  <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionMecanico">Gestion Mecanicos</a>
+  <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionVehiculos">Gestion Vehiculos</a>
+  <a class="btn btn-primary" role="button">Notificaciones</a>
 
   <div><br>
-    <h4>Mis Vehiculos</h4>
+    <h4>Vehiculos</h4>
   </div>
 </div><br>
+
+<input type="text" id="myInput" onkeyup="" placeholder="Buscar por placa" title="Type in a name">
+<br>
 
 
 <div class="container">
   <div class="row">
 
-    <table class="table table-bordred table-striped">
+    <table class="table table-bordred table-striped" data-search="true">
       <thead>
         <tr>
+          <th scope="col">Id Propierario</th>
+          <th scope="col">Nombre Propierario</th>
+          <th scope="col">Apellido Propierario</th>
           <th scope="col">Placa</th>
           <th scope="col">Marca</th>
           <th scope="col">Modelo</th>
@@ -36,7 +41,10 @@
       </thead>
       <tbody>
         <tr>
-          <td>CDO433</td>
+          <td>8204242</td>
+          <td>Andres</td>
+          <td>Rodriguez</td>
+          <td>ABB344</td>
           <td>Mazda</td>
           <td>2015</td>
           <td>Automovil</td>
@@ -49,11 +57,13 @@
               <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
             </div>
           <td>
-
         </tr>
         <tr>
-          <td>ABB244</td>
-          <td>Chevrolet</td>
+          <td>75455234</td>
+          <td>Juan</td>
+          <td>Perez</td>
+          <td>ACX8757</td>
+          <td>Ford</td>
           <td>2020</td>
           <td>Automovil</td>
           <td>5</td>
@@ -64,7 +74,25 @@
               <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
               <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
             </div>
-          </td>
+          <td>
+        </tr>
+        <tr>
+          <td>10356743</td>
+          <td>Alejandra</td>
+          <td>Marin</td>
+          <td>WQA7349</td>
+          <td>Fiat</td>
+          <td>2014</td>
+          <td>Automovil</td>
+          <td>5</td>
+          <td>1400</td>
+          <td>Brasil</td>
+          <td>
+            <div class="btn-group">
+              <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
+            </div>
+          <td>
         </tr>
       </tbody>
     </table>

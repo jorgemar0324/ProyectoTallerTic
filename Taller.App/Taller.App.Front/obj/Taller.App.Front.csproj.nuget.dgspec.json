@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj": {}
+    "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj": {
+    "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+        "projectUniqueName": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
         "projectName": "Taller.App.Front",
-        "projectPath": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
-        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\obj\\",
+        "projectPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

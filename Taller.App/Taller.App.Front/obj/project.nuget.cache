@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qb4C9KmGnfnc+22vVnGkhPCgI/gX9PuqiOUvZAgEhkeVVAN/g0NwE6a6+LeZlHzCEZl2b01KsKZiX0S7FJnwpg==",
+  "dgSpecHash": "8dSDQagAHRLjEAoi0BcC4QwWbyWXC4MRbO4M/nvpvmVeysmZQI2IvGxGcV86UT8lMz7qPICclN7P+55sp8JCQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+  "projectFilePath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

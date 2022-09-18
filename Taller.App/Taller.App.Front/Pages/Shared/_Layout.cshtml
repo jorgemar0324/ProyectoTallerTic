@@ -20,19 +20,27 @@
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Perfil
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" asp-page="/Perfiles/Cliente">Cliente</a></li>
-                            <li><a class="dropdown-item" href="#">Mecánico</a></li>
-                            <li><a class="dropdown-item" href="#">Jefe Operaciones</a></li>
-                        </ul>
-                    </div>
+                <div>
+                    <h1>Taller Tic</h1>
                 </div>
+
+                <!-- nuevo codigo. -->
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Usuario
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" asp-page="/Perfiles/Cliente">Cliente</a></li>
+                        <li><a class="dropdown-item" asp-page="/Perfiles/Mecanico">Mecánico</a></li>
+                        <li><a class="dropdown-item" asp-page="/Perfiles/JefeOperaciones">Jefe Operaciones</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- nuevo codigo. -->
+
+            </div>
             </div>
         </nav>
     </header>
