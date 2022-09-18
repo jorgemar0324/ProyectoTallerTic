@@ -26,23 +26,27 @@ namespace Taller.App.Consola
         static void Main(string[] args)
         {
             //AgregarMecanico();
+            //EditarMeceanico();
             //ObtenerMecanicos();
             //BuscarMecanico("8");
             //EliminarMecanico("1");
             //AgregarPropietario();
+            EditarPropietario();
             //ObtenerPropietarios();
             //BuscarPropietario("2");
             //EliminarPropietario("2");
+            
         }
 
-
+        //--------------------------------------------------------------------------------------------
         // CRUD MECANICO
+        //--------------------------------------------------------------------------------------------
 
         static void AgregarMecanico()
         {
             var mecanico = new Mecanico
             {
-                Id = "3",
+                Id = "2",
                 Nombre = "Leydi",
                 Apellido = "Taba",
                 Telefono ="313543542",
@@ -83,7 +87,31 @@ namespace Taller.App.Consola
             Repositorio.EliminarMecanico(Id);
         }
 
+        static void EditarMeceanico()
+        {
+            var mecanico = new Mecanico
+            {
+                Id = "2",
+                Nombre = "Mauricio",
+                Apellido = "Gonzalez",
+                Telefono ="313543542",
+                FechaNacimiento = new DateTime(1986,05,19),
+                Correo = "lt@hotmail.gmail",
+                Contrasenia = "Taba321",
+                Ciudad = "Tulua",
+                NivelEstudio = "PHD",
+            };
+            Repositorio.EditarMeceanico(mecanico);
+        }
+        
+    
+    
+
+        // ----------------------------------------------------------------------------------------------
+
         // CRUD DEL PROPIETARIO
+
+        //-----------------------------------------------------------------------------------------------
 
          static void AgregarPropietario()
          {
@@ -128,6 +156,23 @@ namespace Taller.App.Consola
         static void EliminarPropietario(string Id)
         {
             RepositorioPropietario.EliminarPropietario(Id);
+        }
+
+        static void EditarPropietario()
+        {
+            var propietario = new Propietario
+            {
+                Id = "2",
+                Nombre = "Rigoberto",
+                Apellido = "Madrid",
+                Telefono ="3002423433",
+                FechaNacimiento = new DateTime(1980,05,19),
+                Correo = "Rm@hotmail.gmail",
+                Contrasenia = "Madrid321",
+                Ciudad = "Villa Maria",
+                Direccion = "Diag 78",
+            };
+            RepositorioPropietario.EditarPropietario(propietario);
         }
 
         // CRUD VEHICULO
