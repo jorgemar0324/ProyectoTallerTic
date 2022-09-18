@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using Taller.App.Dominio;
 
+using System.Collections.Generic;
+using Taller.App.Dominio.Entidades;
 namespace Taller.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioMecanico   

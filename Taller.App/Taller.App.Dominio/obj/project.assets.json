@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\jorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
       "projectName": "Taller.App.Dominio",
-      "projectPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\obj\\",
+      "projectPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

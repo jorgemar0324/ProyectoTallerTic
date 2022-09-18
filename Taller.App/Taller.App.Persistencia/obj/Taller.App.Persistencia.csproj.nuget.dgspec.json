@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj": {}
+    "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj": {
+    "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
         "projectName": "Taller.App.Dominio",
-        "projectPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -57,17 +57,17 @@
         }
       }
     },
-    "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj": {
+    "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj",
         "projectName": "Taller.App.Persistencia",
-        "projectPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Persistencia\\Taller.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -79,8 +79,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj": {
-                "projectPath": "C:\\ProyectoTallerTic\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj"
+              "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Dominio\\Taller.App.Dominio.csproj"
               }
             }
           }

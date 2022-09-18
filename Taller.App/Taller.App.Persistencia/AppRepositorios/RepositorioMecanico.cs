@@ -1,14 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using Taller.App.Dominio;
+using Taller.App.Dominio.Entidades;
 using System.Linq;
 namespace Taller.App.Persistencia.AppRepositorios
 {
-    public class RepositorioMecanico : IRepositorioMecanico
+    public class NewBaseType
     {
         /// <Sumary>
         /// Referancia al contexto del Mecanico
         /// </Sumary>
         private readonly AppContext _appContext;
+    }
+
+    public class RepositorioMecanico : NewBaseType, IRepositorioMecanico
+    {
         ///<Sumary>
         /// Metodo constructor Utiliza
         /// Inyeccion de dependencias para indicar el contexto a utilizar

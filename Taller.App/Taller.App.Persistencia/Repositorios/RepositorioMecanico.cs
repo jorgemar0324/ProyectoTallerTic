@@ -60,5 +60,30 @@ namespace Taller.App.Persistencia.Repositorios
                 throw;
             }
         }
+
+        public void EditarMeceanico (Mecanico mec )
+        {
+            try
+            {
+                var mecanico = this.appContex.Mecanicos.FirstOrDefault(m => m.Id == mec.Id);
+                if(mecanico != null)
+                {
+                    mecanico.Nombre = mec.Nombre;
+                    mecanico.Apellido = mec.Apellido;
+                    mecanico.Telefono = mec.Telefono;
+                    mecanico.FechaNacimiento = mec.FechaNacimiento;
+                    mecanico.Correo = mec.Correo;
+                    mecanico.Contrasenia = mec.Contrasenia;
+                    mecanico.Ciudad = mec.Ciudad;
+                    mecanico.NivelEstudio = mec.NivelEstudio;
+                    this.appContex.SaveChanges();
+                }
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("No se encontrò elemento");
+                throw;
+            }
+        }
     }
 }

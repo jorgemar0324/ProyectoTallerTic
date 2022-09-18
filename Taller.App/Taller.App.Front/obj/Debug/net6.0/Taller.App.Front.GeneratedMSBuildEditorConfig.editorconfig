@@ -8,85 +8,93 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Taller.App.Front
 build_property.RootNamespace = Taller.App.Front
-build_property.ProjectDir = C:\Users\jorge\Desktop\Proyecto Taller Tic\ProyectoTallerTic\Taller.App\Taller.App.Front\
+build_property.ProjectDir = C:\Users\jorge\Desktop\Andres Rama\ProyectoTallerTic-Andres\Taller.App\Taller.App.Front\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jorge\Desktop\Proyecto Taller Tic\ProyectoTallerTic\Taller.App\Taller.App.Front
+build_property.MSBuildProjectDirectory = C:\Users\jorge\Desktop\Andres Rama\ProyectoTallerTic-Andres\Taller.App\Taller.App.Front
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/CitasCliente.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Cliente/CitasCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxDaXRhc0NsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/MisVehiculos.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Cliente/MisVehiculos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxNaXNWZWhpY3Vsb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/NotificacionesCliente.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Cliente/NotificacionesCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxOb3RpZmljYWNpb25lc0NsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cliente/SolicitarCita.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Cliente/SolicitarCita.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZVxTb2xpY2l0YXJDaXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/Registro.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Cuenta/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VlbnRhXFJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Cuenta/RegistroUsuario.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Cuenta/RegistroUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VlbnRhXFJlZ2lzdHJvVXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Error.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Index.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/DetalleVehiculo.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/JefeOperaciones/DetalleVehiculo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXERldGFsbGVWZWhpY3Vsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionClientes.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionClientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXEdlc3Rpb25DbGllbnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionMecanico.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionMecanico.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXEdlc3Rpb25NZWNhbmljby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionVehiculos.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/JefeOperaciones/GestionVehiculos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXEdlc3Rpb25WZWhpY3Vsb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Perfiles/Cliente.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/JefeOperaciones/InfoVehiculos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXEluZm9WZWhpY3Vsb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/JefeOperaciones/RegistroCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXFJlZ2lzdHJvQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Perfiles/Cliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsZXNcQ2xpZW50ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Perfiles/JefeOperaciones.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Perfiles/JefeOperaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsZXNcSmVmZU9wZXJhY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Perfiles/Mecanico.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Perfiles/Mecanico.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsZXNcTWVjYW5pY28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/_ViewImports.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/_ViewStart.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jorge/Desktop/Proyecto Taller Tic/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Shared/_Layout.cshtml]
+[C:/Users/jorge/Desktop/Andres Rama/ProyectoTallerTic-Andres/Taller.App/Taller.App.Front/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hvx31kelq3

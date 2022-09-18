@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+      "projectUniqueName": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
       "projectName": "Taller.App.Front",
-      "projectPath": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
+      "projectPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Front\\Taller.App.Front.csproj",
       "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jorge\\Desktop\\Proyecto Taller Tic\\ProyectoTallerTic\\Taller.App\\Taller.App.Front\\obj\\",
+      "outputPath": "C:\\Users\\jorge\\Desktop\\Andres Rama\\ProyectoTallerTic-Andres\\Taller.App\\Taller.App.Front\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"

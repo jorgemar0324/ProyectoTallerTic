@@ -60,5 +60,30 @@ namespace Taller.App.Persistencia.Repositorios
                 throw;
             }
         }
+
+        public void EditarPropietario(Propietario propi) 
+        {
+            try
+            {
+             var propietario = this.appContex.Propietarios.FirstOrDefault(p => p.Id == propi.Id);
+             if(propietario != null)
+            {
+                propietario.Nombre = propi.Nombre;
+                propietario.Apellido = propi.Apellido;
+                propietario.Telefono = propi.Telefono;
+                propietario.FechaNacimiento = propi.FechaNacimiento;
+                propietario.Correo = propi.Correo;
+                propietario.Contrasenia = propi.Contrasenia;
+                propietario.Ciudad = propi.Ciudad;
+                propietario.Direccion = propi.Direccion;
+            }
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("No se encontrò elemento");
+                throw;
+            }
+           
+        }
     }
 }
