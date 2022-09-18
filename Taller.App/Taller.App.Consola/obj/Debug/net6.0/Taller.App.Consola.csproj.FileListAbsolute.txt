@@ -26,7 +26,6 @@ C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Microsoft.Id
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
@@ -37,13 +36,9 @@ C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\System.Windo
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
@@ -52,8 +47,8 @@ C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Taller.App.Dominio.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Taller.App.Persistencia.dll
-C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Taller.App.Persistencia.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Taller.App.Dominio.pdb
+C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\bin\Debug\net6.0\Taller.App.Persistencia.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\obj\Debug\net6.0\Taller.App.Consola.csproj.AssemblyReference.cache
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\obj\Debug\net6.0\Taller.App.Consola.GeneratedMSBuildEditorConfig.editorconfig
 C:\ProyectoTallerTic\Taller.App\Taller.App.Consola\obj\Debug\net6.0\Taller.App.Consola.AssemblyInfoInputs.cache
