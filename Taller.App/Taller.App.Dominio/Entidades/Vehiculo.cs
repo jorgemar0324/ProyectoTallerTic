@@ -14,5 +14,7 @@ namespace Taller.App.Dominio.Entidades
         public string Pais {get; set;}
         public string Descripcion {get; set;}
 
+        public string Cedula {get; set;}
+
     }
 }

@@ -19,8 +19,18 @@ namespace Taller.App.Persistencia.Repositorios
 
         public void AgregarVehiculo(Vehiculo vehiculo)
         {
-            this.appContex.Vehiculos.Add(vehiculo);
-            this.appContex.SaveChanges();
+            try
+            {
+                this.appContex.Vehiculos.Add(vehiculo);
+                this.appContex.SaveChanges();
+                Console.WriteLine("Se agregó Vehiculo con Exito");
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            
         }
 
         public IEnumerable<Vehiculo> ObtenerVehiculo()
@@ -51,12 +61,37 @@ namespace Taller.App.Persistencia.Repositorios
                 {
                     this.appContex.Vehiculos.Remove(vehiculo);
                     this.appContex.SaveChanges();
-                    Console.WriteLine("Se eliminó Vehiculo"+ Id+" con exito");
+                    Console.WriteLine("Se eliminó Vehiculo: "+ Id+"  con exito");
                 }
             }
             catch (System.Exception)
             {
                 Console.WriteLine("No se pudo Eliminar");
+                throw;
+            }
+        }
+
+        public void EditarVehiculo(Vehiculo vehi)
+        {
+            try
+            {
+                var vehiculo = this.appContex.Vehiculos.FirstOrDefault(p => p.Id == vehi.Id);
+                if(vehiculo != null)
+                {
+                    vehiculo.Marca = vehi.Marca;
+                    vehiculo.Modelo = vehi.Modelo;
+                    vehiculo.Pasajeros = vehi.Pasajeros;
+                    vehiculo.Motor = vehi.Motor;
+                    vehiculo.Pais = vehi.Pais;
+                    vehiculo.Descripcion = vehi.Descripcion;
+                    vehiculo.Cedula = vehi.Cedula;
+                    this.appContex.SaveChanges();
+
+                }
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("No se encontrò elemento");
                 throw;
             }
         }

@@ -19,8 +19,18 @@ namespace Taller.App.Persistencia.Repositorios
 
         public void AgregarPropietario(Propietario propietario)
         {
-            this.appContex.Propietarios.Add(propietario);
-            this.appContex.SaveChanges();
+            try
+            {
+                this.appContex.Propietarios.Add(propietario);
+                this.appContex.SaveChanges();
+                Console.WriteLine("Se agrego Propietario con exito");
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            
         }
 
         public IEnumerable<Propietario> ObtenerPropietario()
@@ -51,7 +61,7 @@ namespace Taller.App.Persistencia.Repositorios
                 {
                     this.appContex.Propietarios.Remove(propietario);
                     this.appContex.SaveChanges();
-                    Console.WriteLine("Se eliminó propietario " + Id +" con exito.");
+                    Console.WriteLine("Se eliminó propietario:  " + Id +"  con exito.");
                 }
             }
             catch (System.Exception)
@@ -76,6 +86,7 @@ namespace Taller.App.Persistencia.Repositorios
                 propietario.Contrasenia = propi.Contrasenia;
                 propietario.Ciudad = propi.Ciudad;
                 propietario.Direccion = propi.Direccion;
+                this.appContex.SaveChanges();
             }
             }
             catch (System.Exception)

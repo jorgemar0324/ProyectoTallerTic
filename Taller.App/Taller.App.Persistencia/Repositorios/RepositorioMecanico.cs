@@ -18,8 +18,18 @@ namespace Taller.App.Persistencia.Repositorios
         }
         public void AgregarMecanico(Mecanico mecanico)
         {
-            this.appContex.Mecanicos.Add(mecanico);
-            this.appContex.SaveChanges();
+            try
+            {
+                this.appContex.Mecanicos.Add(mecanico);
+                this.appContex.SaveChanges();
+                Console.WriteLine("Se agrego Mecanico Con exito");
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            
         }
 
         public IEnumerable<Mecanico> ObtenerMecanicos()
@@ -51,7 +61,7 @@ namespace Taller.App.Persistencia.Repositorios
                 {
                     this.appContex.Mecanicos.Remove(mecanico);
                     this.appContex.SaveChanges();
-                    Console.WriteLine("Se Eliminó Mecanico "+Id+" con exito");
+                    Console.WriteLine("Se Eliminó Mecanico:  "+Id+"  con exito");
                 }
             }
             catch (System.Exception)

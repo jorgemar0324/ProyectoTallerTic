@@ -13,6 +13,14 @@ namespace Taller.App.Persistencia.AppRepositorios
         public DbSet<Propietario> Propietarios {get; set;}
         public DbSet<Vehiculo> Vehiculos {get; set;}
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Vehiculo>()
+            .HasOne(p => p.Propietario)
+            .WithMany(b => b.Vehiculos)
+            .HasForeignKey(p => p.Cedula);
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if(!optionsBuilder.IsConfigured)

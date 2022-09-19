@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Taller.App.Persistencia.AppRepositorios;
 
@@ -11,9 +12,10 @@ using Taller.App.Persistencia.AppRepositorios;
 namespace Taller.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContex))]
-    partial class AppContexModelSnapshot : ModelSnapshot
+    [Migration("20220918225947_180922")]
+    partial class _180922
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,10 +111,6 @@ namespace Taller.App.Persistencia.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Cedula")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -137,9 +135,13 @@ namespace Taller.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PropietarioForeingKey")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("Cedula");
+                    b.HasIndex("PropietarioForeingKey");
 
                     b.ToTable("Vehiculos");
                 });
@@ -148,7 +150,7 @@ namespace Taller.App.Persistencia.Migrations
                 {
                     b.HasOne("Taller.App.Dominio.Entidades.Propietario", "Propietario")
                         .WithMany("Vehiculos")
-                        .HasForeignKey("Cedula")
+                        .HasForeignKey("PropietarioForeingKey")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

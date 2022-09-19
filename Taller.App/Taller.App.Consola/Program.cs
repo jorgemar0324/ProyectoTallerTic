@@ -24,17 +24,31 @@ namespace Taller.App.Consola
         );
 
         static void Main(string[] args)
-        {
-            //AgregarMecanico();
+
+
+        {    //-----------------------Mecanico-------------------------------
+
+           //AgregarMecanico();
             //EditarMeceanico();
             //ObtenerMecanicos();
             //BuscarMecanico("8");
-            //EliminarMecanico("1");
+            //EliminarMecanico("25");
+
+            // -------------------------Propietario---------------------------
+
             //AgregarPropietario();
-            EditarPropietario();
+            //EditarPropietario();
             //ObtenerPropietarios();
             //BuscarPropietario("2");
-            //EliminarPropietario("2");
+            //EliminarPropietario("1");
+
+            //--------------------------Vehiculo-------------------------------
+
+            AgregarVehiculo();
+            //ObtenerVehiculo();
+            //BuscarVehiculo("1");
+            //EliminarVehiculo("1");
+            //EditarVehiculo();
             
         }
 
@@ -46,15 +60,15 @@ namespace Taller.App.Consola
         {
             var mecanico = new Mecanico
             {
-                Id = "2",
-                Nombre = "Leydi",
-                Apellido = "Taba",
-                Telefono ="313543542",
-                FechaNacimiento = new DateTime(1986,05,19),
-                Correo = "lt@hotmail.gmail",
-                Contrasenia = "Taba321",
-                Ciudad = "Jamundi",
-                NivelEstudio = "PHD",
+                Id = "9778800",
+                Nombre = "Luis",
+                Apellido = "Serna",
+                Telefono ="3124324567",
+                FechaNacimiento = new DateTime(1976,03,22),
+                Correo = "Luis@hotmail",
+                Contrasenia = "Lucho097",
+                Ciudad = "Rioacha",
+                NivelEstudio = "Tecnico",
             };
             Repositorio.AgregarMecanico(mecanico);
         }
@@ -91,15 +105,15 @@ namespace Taller.App.Consola
         {
             var mecanico = new Mecanico
             {
-                Id = "2",
+                Id = "6549006",
                 Nombre = "Mauricio",
                 Apellido = "Gonzalez",
                 Telefono ="313543542",
                 FechaNacimiento = new DateTime(1986,05,19),
-                Correo = "lt@hotmail.gmail",
-                Contrasenia = "Taba321",
+                Correo = "lmg@hotmail.gmail",
+                Contrasenia = "Mao321",
                 Ciudad = "Tulua",
-                NivelEstudio = "PHD",
+                NivelEstudio = "Ingeniero",
             };
             Repositorio.EditarMeceanico(mecanico);
         }
@@ -117,15 +131,15 @@ namespace Taller.App.Consola
          {
             var propietario = new Propietario
             {
-                Id = "2",
-                Nombre = "Sandra",
-                Apellido ="Gonzales",
-                Telefono = "30177742323",
-                FechaNacimiento = new DateTime(1987,11,22),
-                Correo ="gmail",
-                Contrasenia = "SG45",
-                Ciudad = "Ibague",
-                Direccion = "Av Caracas",
+                Id = "24477911",
+                Nombre = "Yeison",
+                Apellido ="Zambrano",
+                Telefono = "30224567876",
+                FechaNacimiento = new DateTime(1999,01,30),
+                Correo ="Yei987634@gmail",
+                Contrasenia = "Yetlee78",
+                Ciudad = "Pamplona",
+                Direccion = "cll 13",
             };
             RepositorioPropietario.AgregarPropietario(propietario);
          }
@@ -174,10 +188,71 @@ namespace Taller.App.Consola
             };
             RepositorioPropietario.EditarPropietario(propietario);
         }
-
+        //--------------------------------------------------------------------------------------
         // CRUD VEHICULO
+        //----------------------------------------------------------------------------------------
+
+        static void AgregarVehiculo()
+        {
+            var vehiculo = new Vehiculo
+            {
+                Id = "ZZZ583",
+                Cedula = "24477911",
+                Marca = "Lamborgini",
+                Modelo = "2022",
+                Pasajeros = "2",
+                Motor = "V34",
+                Pais = "EEUU",
+                Descripcion = " Una uva",
+            };
+            RepositorioVehiculo.AgregarVehiculo(vehiculo);
+        }
+
+        static void ObtenerVehiculo()
+        {
+            foreach (var v in RepositorioVehiculo.ObtenerVehiculo())
+            {
+                Console.WriteLine("-----------------");
+                Console.WriteLine("Vehiculo: "+ v.Marca + "\nModelo: "+ v.Modelo+"\nPropietario: "+ v.Cedula);
+                Console.WriteLine("------------------");           
+             }
+        }
 
 
+        static void BuscarVehiculo(string Id)
+        {
+            var v = RepositorioVehiculo.BuscarVehiculo(Id);
+            if (v != null)
+
+            {
+                Console.WriteLine("Se encontró el vehiculo: " + v.Marca +" "+ v.Modelo + "\nPropietario: "+ v.Cedula);
+            }
+            else
+            {
+                Console.WriteLine("No se encontró");
+            }
+        }
+
+        static void EliminarVehiculo(string Id)
+        {
+            RepositorioVehiculo.EliminarVehiculo(Id);
+        }
+
+        static void EditarVehiculo()
+        {
+            var vehiculo = new Vehiculo
+            {
+                Id = "1",
+                Cedula = "2",
+                Marca = "Renault",
+                Modelo = "2008",
+                Pasajeros = "5",
+                Motor = "V6",
+                Pais = "EEUU",
+                Descripcion = " Como Nuevo",
+            };
+            RepositorioVehiculo.EditarVehiculo(vehiculo);
+        }
     }
 
 
