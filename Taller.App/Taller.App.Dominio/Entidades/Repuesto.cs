@@ -11,5 +11,12 @@ namespace Taller.App.Dominio.Entidades
         public string Marca {get; set;}
         public string Caracteristicas {get; set;}
         public double Valor {get; set;}
+
+
+
+        public List<Revision> Revisiones {get; set;}
+       
+
+        
     }
 }

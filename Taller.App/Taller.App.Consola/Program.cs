@@ -23,33 +23,48 @@ namespace Taller.App.Consola
             new Persistencia.AppRepositorios.AppContex()
         );
 
+        private static RepositorioRepuesto RepositorioRepuesto = new RepositorioRepuesto
+        (
+            new Persistencia.AppRepositorios.AppContex()
+        );
+
+        private static RepositorioRevision RepositorioRevision = new RepositorioRevision
+        (
+            new Persistencia.AppRepositorios.AppContex()
+        );
+
         static void Main(string[] args)
 
 
         {    //-----------------------Mecanico-------------------------------
 
-           //AgregarMecanico();
+            //AgregarMecanico();
             //EditarMeceanico();
             //ObtenerMecanicos();
-            //BuscarMecanico("8");
-            //EliminarMecanico("25");
+            //BuscarMecanico("6549007");
+            //EliminarMecanico("6549007");
 
             // -------------------------Propietario---------------------------
 
             //AgregarPropietario();
             //EditarPropietario();
             //ObtenerPropietarios();
-            //BuscarPropietario("2");
-            //EliminarPropietario("1");
+            //BuscarPropietario("11223344558");
+            //EliminarPropietario("11223344558");
 
             //--------------------------Vehiculo-------------------------------
 
-            AgregarVehiculo();
+            //AgregarVehiculo();
             //ObtenerVehiculo();
-            //BuscarVehiculo("1");
-            //EliminarVehiculo("1");
+            //BuscarVehiculo("CUN829");
+            //EliminarVehiculo("VBP009");
             //EditarVehiculo();
-            
+
+
+            //---------------------------Repuesto-----------------------------------
+
+            //AgregarRepuesto();
+            //AgregarRevision();
         }
 
         //--------------------------------------------------------------------------------------------
@@ -60,15 +75,15 @@ namespace Taller.App.Consola
         {
             var mecanico = new Mecanico
             {
-                Id = "9778800",
-                Nombre = "Luis",
-                Apellido = "Serna",
-                Telefono ="3124324567",
-                FechaNacimiento = new DateTime(1976,03,22),
-                Correo = "Luis@hotmail",
-                Contrasenia = "Lucho097",
-                Ciudad = "Rioacha",
-                NivelEstudio = "Tecnico",
+                Id = "6549010",
+                Nombre = "Felipe",
+                Apellido = "Torres",
+                Telefono ="3124560762",
+                FechaNacimiento = new DateTime(1999,05,26),
+                Correo = "fTorres@hotmail",
+                Contrasenia = "Jarajara213",
+                Ciudad = "Tulua",
+                NivelEstudio = "Ingeniero",
             };
             Repositorio.AgregarMecanico(mecanico);
         }
@@ -92,7 +107,7 @@ namespace Taller.App.Consola
             }
             else
             {
-                Console.WriteLine("No se encontró");
+                Console.WriteLine("No se encontró Mecanico: "+ Id );
             }
         }
 
@@ -105,15 +120,15 @@ namespace Taller.App.Consola
         {
             var mecanico = new Mecanico
             {
-                Id = "6549006",
-                Nombre = "Mauricio",
-                Apellido = "Gonzalez",
-                Telefono ="313543542",
-                FechaNacimiento = new DateTime(1986,05,19),
-                Correo = "lmg@hotmail.gmail",
-                Contrasenia = "Mao321",
-                Ciudad = "Tulua",
-                NivelEstudio = "Ingeniero",
+               Id = "6549008",
+                Nombre = "Jefry",
+                Apellido = "Rivera",
+                Telefono ="3034567867",
+                FechaNacimiento = new DateTime(1999,03,06),
+                Correo = "Jefri@gmail",
+                Contrasenia = "jr567",
+                Ciudad = "Rosas Cauca",
+                NivelEstudio = "Tecnologo",
             };
             Repositorio.EditarMeceanico(mecanico);
         }
@@ -131,15 +146,15 @@ namespace Taller.App.Consola
          {
             var propietario = new Propietario
             {
-                Id = "24477911",
-                Nombre = "Yeison",
-                Apellido ="Zambrano",
-                Telefono = "30224567876",
-                FechaNacimiento = new DateTime(1999,01,30),
-                Correo ="Yei987634@gmail",
-                Contrasenia = "Yetlee78",
-                Ciudad = "Pamplona",
-                Direccion = "cll 13",
+                Id = "11223344559",
+                Nombre = "David",
+                Apellido ="Arias",
+                Telefono = "3003467891",
+                FechaNacimiento = new DateTime(2000,06,25),
+                Correo ="DArias@gmail",
+                Contrasenia = "Pasword456",
+                Ciudad = "Manizalez",
+                Direccion = "Av Santander",
             };
             RepositorioPropietario.AgregarPropietario(propietario);
          }
@@ -163,7 +178,7 @@ namespace Taller.App.Consola
             }
             else
             {
-                Console.WriteLine("No se encontró");
+                Console.WriteLine("No se encontró Propietario: "+ Id);
             }
         }
 
@@ -196,14 +211,14 @@ namespace Taller.App.Consola
         {
             var vehiculo = new Vehiculo
             {
-                Id = "ZZZ583",
-                Cedula = "24477911",
-                Marca = "Lamborgini",
-                Modelo = "2022",
+                Id = "CUN830",
+                PropietarioId = "11223344559",
+                Marca = "BMW",
+                Modelo = "2023",
                 Pasajeros = "2",
-                Motor = "V34",
+                Motor = "V10",
                 Pais = "EEUU",
-                Descripcion = " Una uva",
+                Descripcion = " 0 Km",
             };
             RepositorioVehiculo.AgregarVehiculo(vehiculo);
         }
@@ -213,7 +228,7 @@ namespace Taller.App.Consola
             foreach (var v in RepositorioVehiculo.ObtenerVehiculo())
             {
                 Console.WriteLine("-----------------");
-                Console.WriteLine("Vehiculo: "+ v.Marca + "\nModelo: "+ v.Modelo+"\nPropietario: "+ v.Cedula);
+                Console.WriteLine("Vehiculo: "+ v.Marca + "\nModelo: "+ v.Modelo+"\nPropietario: "+ v.PropietarioId);
                 Console.WriteLine("------------------");           
              }
         }
@@ -225,7 +240,7 @@ namespace Taller.App.Consola
             if (v != null)
 
             {
-                Console.WriteLine("Se encontró el vehiculo: " + v.Marca +" "+ v.Modelo + "\nPropietario: "+ v.Cedula);
+                Console.WriteLine("Se encontró el vehiculo: " + v.Marca +" "+ v.Modelo + "\nPropietario: "+ v.PropietarioId);
             }
             else
             {
@@ -242,16 +257,57 @@ namespace Taller.App.Consola
         {
             var vehiculo = new Vehiculo
             {
-                Id = "1",
-                Cedula = "2",
-                Marca = "Renault",
-                Modelo = "2008",
-                Pasajeros = "5",
-                Motor = "V6",
-                Pais = "EEUU",
-                Descripcion = " Como Nuevo",
+                Id = "CUN829",
+                PropietarioId = "11223344556",
+                Marca = "KIA",
+                Modelo = "2015",
+                Pasajeros = "4",
+                Motor = "Gas",
+                Pais = "Colombia",
+                Descripcion = " 250000 Km",
             };
             RepositorioVehiculo.EditarVehiculo(vehiculo);
+        }
+
+        //---------------------------------------------------------------------------------------
+        //CRUD REPUESTO
+        //---------------------------------------------------------------------------------------
+
+        static void AgregarRepuesto()
+        {
+            var repuesto = new Repuesto
+            {
+                Id = "LGTH001-4",
+                Nombre = "Farola",
+                Marca = "Chevrolet",
+                Caracteristicas = "Farola Chevrolet Aveo",
+                Valor = 340000,
+            
+            
+            };
+            RepositorioRepuesto.AgregarRepuesto(repuesto);
+        }
+
+        //------------------------------------------------------------------------------
+        // CRUD REVISION
+        //------------------------------------------------------------------------------
+
+        static void AgregarRevision()
+        {
+            var revision = new Revision
+            {
+                Id = "004",
+                Observaciones = "Lamina y Pintura",
+                Estado = "Esperando Repuesto",
+                FechaSolicitud = new DateTime(2022,05,03),
+                FechaAgendamiento = new DateTime(2022,05,03),
+                FechaEntrega = new DateTime(2022,05,08),
+                MecanicoAsignado = "6549010",
+                VehiculoAsignado = "CUN829",
+                
+            
+            };
+            RepositorioRevision.AgregarRevision(revision);
         }
     }
 

@@ -12,13 +12,29 @@ namespace Taller.App.Persistencia.AppRepositorios
         public DbSet<Mecanico> Mecanicos {get; set;}
         public DbSet<Propietario> Propietarios {get; set;}
         public DbSet<Vehiculo> Vehiculos {get; set;}
+        public DbSet<Revision> Revisiones {get; set;}
+        public DbSet<Repuesto> Repuestos {get; set;}
+
+         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Vehiculo>()
             .HasOne(p => p.Propietario)
             .WithMany(b => b.Vehiculos)
-            .HasForeignKey(p => p.Cedula);
+            .HasForeignKey(p => p.PropietarioId);
+
+            modelBuilder.Entity<Revision>()
+            .HasOne(m => m.Mecanico)
+            .WithMany(r => r.Revisiones)
+            .HasForeignKey(m => m.MecanicoAsignado);
+
+            modelBuilder.Entity<Revision>()
+            .HasOne(r => r.Vehiculo)
+            .WithMany(v => v.Revisiones)
+            .HasForeignKey(r => r.VehiculoAsignado);
+
+    
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

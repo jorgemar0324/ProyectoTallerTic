@@ -104,13 +104,83 @@ namespace Taller.App.Persistencia.Migrations
                     b.ToTable("Propietarios");
                 });
 
-            modelBuilder.Entity("Taller.App.Dominio.Entidades.Vehiculo", b =>
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Repuesto", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Cedula")
+                    b.Property<string>("Caracteristicas")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Valor")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Repuestos");
+                });
+
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Revision", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaAgendamiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaEntrega")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaSolicitud")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MecanicoAsignado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Observaciones")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RepuestoAsignado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RepuestoId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("VehiculoAsignado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MecanicoAsignado");
+
+                    b.HasIndex("RepuestoId");
+
+                    b.HasIndex("VehiculoAsignado");
+
+                    b.ToTable("Revisiones");
+                });
+
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Vehiculo", b =>
+                {
+                    b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Descripcion")
@@ -137,27 +207,73 @@ namespace Taller.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PropietarioId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("Cedula");
+                    b.HasIndex("PropietarioId");
 
                     b.ToTable("Vehiculos");
+                });
+
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Revision", b =>
+                {
+                    b.HasOne("Taller.App.Dominio.Entidades.Mecanico", "Mecanico")
+                        .WithMany("Revisiones")
+                        .HasForeignKey("MecanicoAsignado")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Taller.App.Dominio.Entidades.Repuesto", "Repuesto")
+                        .WithMany("Revisiones")
+                        .HasForeignKey("RepuestoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Taller.App.Dominio.Entidades.Vehiculo", "Vehiculo")
+                        .WithMany("Revisiones")
+                        .HasForeignKey("VehiculoAsignado")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Mecanico");
+
+                    b.Navigation("Repuesto");
+
+                    b.Navigation("Vehiculo");
                 });
 
             modelBuilder.Entity("Taller.App.Dominio.Entidades.Vehiculo", b =>
                 {
                     b.HasOne("Taller.App.Dominio.Entidades.Propietario", "Propietario")
                         .WithMany("Vehiculos")
-                        .HasForeignKey("Cedula")
+                        .HasForeignKey("PropietarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Propietario");
                 });
 
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Mecanico", b =>
+                {
+                    b.Navigation("Revisiones");
+                });
+
             modelBuilder.Entity("Taller.App.Dominio.Entidades.Propietario", b =>
                 {
                     b.Navigation("Vehiculos");
+                });
+
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Repuesto", b =>
+                {
+                    b.Navigation("Revisiones");
+                });
+
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Vehiculo", b =>
+                {
+                    b.Navigation("Revisiones");
                 });
 #pragma warning restore 612, 618
         }

@@ -23,7 +23,11 @@ namespace Taller.App.Persistencia.Repositorios
             {
                 this.appContex.Propietarios.Add(propietario);
                 this.appContex.SaveChanges();
+                Console.WriteLine("");
+                Console.WriteLine("-------------------------------");
                 Console.WriteLine("Se agrego Propietario con exito");
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine("");
             }
             catch (System.Exception)
             {

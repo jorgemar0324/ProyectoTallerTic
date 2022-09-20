@@ -23,7 +23,11 @@ namespace Taller.App.Persistencia.Repositorios
             {
                 this.appContex.Vehiculos.Add(vehiculo);
                 this.appContex.SaveChanges();
+                Console.WriteLine("");
+                Console.WriteLine("----------------------------");
                 Console.WriteLine("Se agregó Vehiculo con Exito");
+                Console.WriteLine("----------------------------");
+                Console.WriteLine("");
             }
             catch (System.Exception)
             {
@@ -84,8 +88,10 @@ namespace Taller.App.Persistencia.Repositorios
                     vehiculo.Motor = vehi.Motor;
                     vehiculo.Pais = vehi.Pais;
                     vehiculo.Descripcion = vehi.Descripcion;
-                    vehiculo.Cedula = vehi.Cedula;
+                    vehiculo.PropietarioId = vehi.PropietarioId;
                     this.appContex.SaveChanges();
+
+                    Console.WriteLine("Vehiculo Editado Con Exito");
 
                 }
             }
