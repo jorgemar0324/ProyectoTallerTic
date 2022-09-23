@@ -63,6 +63,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmVmZU9wZXJhY2lvbmVzXEdlc3Rpb25WZWhpY3Vsb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Mecanico/MisCitas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjYW5pY29cTWlzQ2l0YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Mecanico/Notificaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjYW5pY29cTm90aWZpY2FjaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Mecanico/SolicitarRepuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjYW5pY29cU29saWNpdGFyUmVwdWVzdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ProyectoTallerTic/Taller.App/Taller.App.Front/Pages/Perfiles/Cliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsZXNcQ2xpZW50ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

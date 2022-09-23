@@ -26,12 +26,12 @@ namespace Taller.App.Persistencia.AppRepositorios
 
             modelBuilder.Entity<Revision>()
             .HasOne(m => m.Mecanico)
-            .WithMany(r => r.Revisiones)
+            .WithMany(r => r.Revision)
             .HasForeignKey(m => m.MecanicoAsignado);
 
             modelBuilder.Entity<Revision>()
             .HasOne(r => r.Vehiculo)
-            .WithMany(v => v.Revisiones)
+            .WithMany(v => v.Revision)
             .HasForeignKey(r => r.VehiculoAsignado);
 
     

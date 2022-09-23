@@ -20,16 +20,10 @@ namespace Taller.App.Persistencia.Repositorios
 
         public void AgregarRevision(Revision revision)
         {
-            try
-            {
+        
                 this.appContex.Revisiones.Add(revision);
                 this.appContex.SaveChanges();
-            }
-            catch (System.Exception)
-            {
-                
-                throw;
-            }
+            
         }
     }
 }

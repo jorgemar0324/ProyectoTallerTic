@@ -1,0 +1,88 @@
+﻿@page
+@model Taller.App.Front.pages.MisCitasModel
+@{
+}
+
+<div class="container" aria-label="Basic example">
+
+  <a class="btn btn-primary" role="button" asp-page="../Perfiles/Mecanico">Inicio Mecanico</a>
+  <a class="btn btn-warning" role="button" asp-page="/Mecanico/MisCitas">Mis Citas</a>
+  <a class="btn btn-primary" role="button" asp-page="/Mecanico/SolicitarRepuesto">Solicitar Repuestos</a>
+  <a class="btn btn-primary" role="button" asp-page="/Mecanico/Notificaciones">Notificaciones</a>
+
+  <div class="text-center"><br>
+    <h3>Mis Citas Agendadas</h3>
+  </div>
+</div><br>
+
+<input type="text" id="myInput" onkeyup="" placeholder="Buscar por placa" title="Type in a name">
+<br>
+
+
+<div class="container">
+  <div class="row">
+
+    <table class="table table-bordred table-striped" data-search="true">
+      <thead>
+        <tr>
+          <th scope="col">No Servicio</th>
+          <th scope="col">Vehiculo</th>
+          <th scope="col">Nombre Propierario</th>
+          <th scope="col">Fecha Servicio</th>
+          <th scope="col">Tipo de Servicio</th>
+          <th scope="col">Repuestos</th>
+          <th scope="col">Comentarios</th>
+          <th scope="col">Estado</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>ABB344</td>
+          <td>Andres Rodriguez</td>
+          <td>09/08/22</td>
+          <td>Electrico</td>
+          <td>
+            <div class="btn-group">
+              <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
+            </div>
+          <td>
+          <td>Listo</td>
+        </tr>
+        <tr>
+          <td>75455234</td>
+          <td>ACX8757</td>
+          <td>Juan Perez</td>
+          <td>24/06/22</td>
+          <td>Montallantas</td>
+          <td>
+            <div class="btn-group">
+              <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
+            </div>
+          <td>
+          <td>En Taller</td>
+        </tr>
+        <tr>
+          <td>10356743</td>
+          <td>WQA7349</td>
+          <td>Alejandra Marin</td>
+          <td>03/06/22</td>
+          <td>Hidrahulico</td>
+          <td>
+            <div class="btn-group">
+              <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
+            </div>
+          <td>
+          <td>En Taller</td>
+        
+          
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><br><br><br>

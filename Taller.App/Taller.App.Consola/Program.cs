@@ -50,7 +50,7 @@ namespace Taller.App.Consola
             //EditarPropietario();
             //ObtenerPropietarios();
             //BuscarPropietario("11223344558");
-            //EliminarPropietario("11223344558");
+            //EliminarPropietario("11223344558");s
 
             //--------------------------Vehiculo-------------------------------
 
@@ -64,7 +64,7 @@ namespace Taller.App.Consola
             //---------------------------Repuesto-----------------------------------
 
             //AgregarRepuesto();
-            //AgregarRevision();
+            AgregarRevision();
         }
 
         //--------------------------------------------------------------------------------------------
@@ -75,15 +75,15 @@ namespace Taller.App.Consola
         {
             var mecanico = new Mecanico
             {
-                Id = "6549010",
-                Nombre = "Felipe",
-                Apellido = "Torres",
-                Telefono ="3124560762",
-                FechaNacimiento = new DateTime(1999,05,26),
-                Correo = "fTorres@hotmail",
-                Contrasenia = "Jarajara213",
-                Ciudad = "Tulua",
-                NivelEstudio = "Ingeniero",
+                Id = "6549009",
+                Nombre = "Andres",
+                Apellido = "Zuluaga",
+                Telefono ="3135436789",
+                FechaNacimiento = new DateTime(1996,05,26),
+                Correo = "az8908@hotmail",
+                Contrasenia = "Az345",
+                Ciudad = "Cali",
+                NivelEstudio = "Tecnico",
             };
             Repositorio.AgregarMecanico(mecanico);
         }
@@ -146,15 +146,15 @@ namespace Taller.App.Consola
          {
             var propietario = new Propietario
             {
-                Id = "11223344559",
-                Nombre = "David",
-                Apellido ="Arias",
-                Telefono = "3003467891",
-                FechaNacimiento = new DateTime(2000,06,25),
-                Correo ="DArias@gmail",
-                Contrasenia = "Pasword456",
-                Ciudad = "Manizalez",
-                Direccion = "Av Santander",
+                Id = "11223344558",
+                Nombre = "Sandra",
+                Apellido ="Bravo",
+                Telefono = "3018887632",
+                FechaNacimiento = new DateTime(1888,2,27),
+                Correo ="SBravis@gmail",
+                Contrasenia = "SAMI49302",
+                Ciudad = "Cucuta",
+                Direccion = "Av Jimenez",
             };
             RepositorioPropietario.AgregarPropietario(propietario);
          }
@@ -211,9 +211,9 @@ namespace Taller.App.Consola
         {
             var vehiculo = new Vehiculo
             {
-                Id = "CUN830",
-                PropietarioId = "11223344559",
-                Marca = "BMW",
+                Id = "CUN833",
+                PropietarioId = "112233445",
+                Marca = "Hyunday",
                 Modelo = "2023",
                 Pasajeros = "2",
                 Motor = "V10",
@@ -303,7 +303,7 @@ namespace Taller.App.Consola
                 FechaAgendamiento = new DateTime(2022,05,03),
                 FechaEntrega = new DateTime(2022,05,08),
                 MecanicoAsignado = "6549010",
-                VehiculoAsignado = "CUN829",
+                VehiculoAsignado = "CUN830",
                 
             
             };
