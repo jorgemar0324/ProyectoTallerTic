@@ -86,23 +86,23 @@
                 <form class="px-4" method="POST">
 
                     <div class="row">
-                        <div class="mb-3 col-4">
+                        <div class="mb-3 col-6">
                             <label for="recipient-name" class="col-form-label">Id Revisión:</label>
                             <input type="text" class="form-control" id="recipient-name"
                                 asp-for="@Model.revisionActual.Id" name="Id">
                         </div>
-                        <div class="mb-3 col-4">
+                        <div class="mb-3 col-6">
                             <label for="recipient-name" class="col-form-label">Placa:</label>
                             <input type="text" class="form-control" id="recipient-name"
                                 asp-for="@Model.revisionActual.VehiculoId" name="VehiculoId">
                         </div>
-                        <div class="mb-3 col-4">
+                        <div class="mb-3 col-12">
                             <label for="recipient-name" class="col-form-label">Fecha Solicitud:</label>
                             <input type="date" class="form-control" id="recipient-name"
                                 asp-for="@Model.revisionActual.FechaSolicitud" name="FechaSolicitud">
                     </div>
                     <div class="row">
-                        <div class="mb-3 col-4">
+                        <div class="mb-3 col-6">
                             <label for="recipient-name" class="col-form-label">Descripción Servício:</label>
                             <select type="text" class="form-select" id="recipient-name"
                                 asp-for="@Model.revisionActual.Observaciones" name="Observaciones">
@@ -112,12 +112,12 @@
                                 <option value="Lamina y Pintura">Lamina y Pintura</option>
                             </select>    
                         </div>
-                        <div class="mb-3 col-4">
+                        <div class="mb-3 col-6">
                             <label for="recipient-name" class="col-form-label">Fecha Agendamiento:</label>
                             <input type="date" class="form-control" id="recipient-name"
                                 asp-for="@Model.revisionActual.FechaAgendamiento" name="FechaAgendamiento">
                         </div>
-                        <div class="mb-3 col-4">
+                        <div class="mb-3 col-12">
                             <label for="recipient-name" class="col-form-label">Fecha Entrega:</label>
                             <input type="date" class="form-control" id="recipient-name"
                                 asp-for="@Model.revisionActual.FechaEntrega" name="FechaEntrega">
