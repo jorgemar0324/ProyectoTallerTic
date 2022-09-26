@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Taller.App.Front.pages
 {
-    public class MisCitasModel : PageModel
+    public class RegistroClienteModel : PageModel
     {
         public void OnGet()
         {

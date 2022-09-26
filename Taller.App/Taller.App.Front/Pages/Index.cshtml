@@ -1,6 +1,9 @@
 ﻿@page
 @model IndexModel
 @{
+
+
+
     ViewData["Title"] = "Home page";
 }
 <style>
@@ -24,7 +27,7 @@
     <div class="row">
         <div class="col bd py-5">
             <div class="text-end">
-             <h2 class="fw.bold text-center py-3">Taller Tic</h2>
+                <h2 class="fw.bold text-center py-3">Taller Tic</h2>
             </div>
             <h2 class="fw.bold text-center py-1">Bienvenido</h2>
             <div class="mb-4">
@@ -39,9 +42,12 @@
                 <input type="checkbox" name="connected" class="form-check-input">
                 <label for="connected" class="form.check-label">Mantenerme Conectado</label>
             </div>
+
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary bg-gradient w-100 my-1">Iniciar Sesión</button>
+                <a href="/Perfiles/JefeOperaciones" type="submit" class="btn btn-primary bg-gradient w-100 my-1">Iniciar
+                    Sesión</a>
             </div>
+
             <div class="my-3">
                 <span class="mb-4">No Tienes Cuenta? <a href="/Cuenta/Registro">Registrate</a></span>
             </div>

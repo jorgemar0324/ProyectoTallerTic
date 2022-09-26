@@ -10,3 +10,15 @@ C:\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.D
 C:\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\refint\Taller.App.Dominio.dll
 C:\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.pdb
 C:\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\ref\Taller.App.Dominio.dll
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\bin\Debug\net6.0\Taller.App.Dominio.deps.json
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\bin\Debug\net6.0\Taller.App.Dominio.dll
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\bin\Debug\net6.0\Taller.App.Dominio.pdb
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.csproj.AssemblyReference.cache
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.AssemblyInfoInputs.cache
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.AssemblyInfo.cs
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.csproj.CoreCompileInputs.cache
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.dll
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\refint\Taller.App.Dominio.dll
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\Taller.App.Dominio.pdb
+C:\ProyectoC3\ProyectoTallerTic\Taller.App\Taller.App.Dominio\obj\Debug\net6.0\ref\Taller.App.Dominio.dll

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Taller.App.Front.pages
 {
-    public class SolicitarRepuestoModel : PageModel
+    public class InfoVehiculosModel : PageModel
     {
         public void OnGet()
         {

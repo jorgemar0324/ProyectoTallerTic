@@ -1,0 +1,126 @@
+﻿@page
+@model Taller.App.Front.pages.SolicitarRepuestoModel
+@{
+}
+
+<div class="container" aria-label="Basic example">
+
+   <a class="btn btn-primary" role="button" asp-page="/PageMecanico/MisCitas">Mis Citas</a>
+  <a class="btn btn-warning" role="button" asp-page="/PageMecanico/SolicitarRepuesto">Solicitar Repuestos</a>
+  <a class="btn btn-primary" role="button" asp-page="/PageMecanico/Notificaciones">Notificaciones</a>
+
+  <div class="text-center"><br>
+    <h2>Repuestos</h2>
+  </div>
+</div><br>
+
+<div>
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#revisionModal">
+    Crear Repuesto
+  </button>
+</div><br>
+
+<div></div>
+<input type="text" id="myInput" onkeyup="" placeholder="Buscar por Id" title="Type in a name">
+</div><br>
+
+
+<div class="container">
+  <div class="row">
+    <table class="table table-bordred table-striped" data-search="true">
+      <thead>
+        <tr>
+          <th scope="col">Id Repuesto</th>
+          <th scope="col">Nombre Repuesto</th>
+          <th scope="col">Marca Vehiculo</th>
+          <th scope="col">Caracteristicas</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Revisión Asociada</th>
+         
+        </tr>
+      </thead>
+      
+    <tbody>
+                @foreach (var r in Model.ListaRepuestos)
+                {
+                    <tr>
+                        <td>@r.Id</td>
+                        <td>@r.Nombre</td>
+                        <td>@r.Marca</td>
+                        <td>@r.Caracteristicas</td>
+                        <td>@r.Valor</td>
+                        <td>@r.RevisionId</td>
+                        
+                        <td>
+                            <div class="btn-group">
+                                <form method="POST">
+                                    <a href="#" class="btn btn-warning"><span
+                                        class="glyphicon glyphicon-pencil"></span>Editar</a>
+                                </form>
+                                <form method="POST">
+                                    <button class="btn btn-danger" title="Eliminar Repuesto" type="submit" asp-route-id="@r.Id"
+                                    asp-page-handler="Del">Eliminar</button>
+                                </form>
+                            </div>
+                        <td>
+                    </tr>
+                }
+    </tbody>
+  </div>
+</div>
+
+
+<div class="modal fade" id="revisionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Revisión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="px-4" method="POST">
+
+                    <div class="row">
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Id Repuesto:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.repuestoActual.Id" name="Id">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Nombre Repuesto:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.repuestoActual.Nombre" name="Nombre">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Marca Del Vehiculo:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.repuestoActual.Marca" name="Marca">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Caracteristicas:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.repuestoActual.Caracteristicas" name="Caracteristicas">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Precio:</label>
+                            <input type="number" class="form-control" id="recipient-name"
+                                asp-for="@Model.repuestoActual.Valor" name="Valor">
+                        </div>
+
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Revision Asociada:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.repuestoActual.RevisionId" name="RevisionId">
+                        </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" asp-page-handler="Add">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

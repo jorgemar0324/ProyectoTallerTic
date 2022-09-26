@@ -25,5 +25,6 @@ namespace Taller.App.Dominio.Entidades
 
         public List<Revision> Revisiones {get; set;}
 
+
     }
 }

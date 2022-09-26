@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Taller.App.Dominio.Entidades;
 
-namespace Taller.App.Persistencia.AppRepositorios
+namespace Taller.App.Persistencia
 {
     public class AppContex : DbContext
     {
@@ -26,14 +26,18 @@ namespace Taller.App.Persistencia.AppRepositorios
 
             modelBuilder.Entity<Revision>()
             .HasOne(m => m.Mecanico)
-            .WithMany(r => r.Revision)
-            .HasForeignKey(m => m.MecanicoAsignado);
+            .WithMany(r => r.Revisiones)
+            .HasForeignKey(m => m.MecanicoId);
 
             modelBuilder.Entity<Revision>()
             .HasOne(r => r.Vehiculo)
-            .WithMany(v => v.Revision)
-            .HasForeignKey(r => r.VehiculoAsignado);
+            .WithMany(v => v.Revisiones)
+            .HasForeignKey(r => r.VehiculoId);
 
+            modelBuilder.Entity<Repuesto>()
+            .HasOne(r => r.Revision)
+            .WithMany(v => v.Repuestos)
+            .HasForeignKey(r => r.RevisionId);
     
         }
 
@@ -44,5 +48,11 @@ namespace Taller.App.Persistencia.AppRepositorios
                 optionsBuilder.UseSqlServer("Server=tcp:server-tallertic-g9-e2.database.windows.net,1433;Initial Catalog=bd_tallertic;Persist Security Info=False;User ID=Jaguartech;Password=Jaguar02;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
+
+        //Base de datos Jorge
+        //Server=tcp:server-tallerticc3-g9-e2.database.windows.net,1433;Initial Catalog=bd_tallertic;Persist Security Info=False;User ID=Grupo9Equipo2;Password=Misiontic2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+        // Base datos Andres:
+        // Server=tcp:server-tallertic-g9-e2.database.windows.net,1433;Initial Catalog=bd_tallertic;Persist Security Info=False;User ID=Jaguartech;Password=Jaguar02;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
     }
 }

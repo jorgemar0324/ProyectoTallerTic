@@ -1,0 +1,131 @@
+﻿@page
+@model Taller.App.Front.pages.MisCitasModel
+@{
+}
+
+<div class="container" aria-label="Basic example">
+
+  <a class="btn btn-warning" role="button" asp-page="/PageMecanico/MisCitas">Mis Citas</a>
+  <a class="btn btn-primary" role="button" asp-page="/PageMecanico/SolicitarRepuesto">Solicitar Repuestos</a>
+  <a class="btn btn-primary" role="button" asp-page="/PageMecanico/Notificaciones">Notificaciones</a> 
+
+  <div class="text-center"><br>
+    <h2>Revisiones Agendadas</h2>
+  </div>
+</div><br>
+
+<div>
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#revisionModal">
+    Editar Estado
+  </button>
+</div>
+
+<br>
+
+<div></div>
+<input type="text" id="myInput" onkeyup="" placeholder="Id Mecanico" title="Type in a name">
+</div><br>
+
+
+<div class="container">
+  <div class="row">
+    <table class="table table-bordred table-striped" data-search="true">
+      <thead>
+        <tr>
+          <th scope="col">Id Revision</th>
+          <th scope="col">Placa Vehiculo</th>
+          <th scope="col">Fecha Solicitud</th>
+          <th scope="col">Descripción Servicio</th>
+          <th scope="col">Fecha Agendamiento</th>
+          <th scope="col">Fecha Entrega</th>
+          <th scope="col">Id Mecánico</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      
+    <tbody>
+                @foreach (var r in Model.listaRevisiones)
+                {
+                    <tr>
+                        <td>@r.Id</td>
+                        <td>@r.VehiculoId</td>
+                        <td>@r.FechaSolicitud</td>
+                        <td>@r.Observaciones</td>
+                        <td>@r.FechaAgendamiento</td>
+                        <td>@r.FechaEntrega</td>
+                        <td>@r.MecanicoId</td>
+                        <td>@r.Estado</td>
+                        
+                    </tr>
+                }
+    </tbody>
+  </div>
+</div>
+
+
+<div class="modal fade" id="revisionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Revisión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="px-4" method="POST">
+
+                    <div class="row">
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Id Revisión:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.Id" name="Id">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Placa:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.VehiculoId" name="VehiculoId">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Fecha Solicitud:</label>
+                            <input type="date" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.FechaSolicitud" name="FechaSolicitud">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Descripción Servício:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.Observaciones" name="Observaciones">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Fecha Agendamiento:</label>
+                            <input type="date" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.FechaAgendamiento" name="FechaAgendamiento">
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="recipient-name" class="col-form-label">Fecha Entrega:</label>
+                            <input type="date" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.FechaEntrega" name="FechaEntrega">
+                        </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Id Mecánico:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.revisionActual.MecanicoId" name="MecanicoId">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Estado:</label>
+                            <select class="form-select" asp-for="@Model.revisionActual.Estado" name="Estado" >
+                              <option value="Pendiente">Pendiente</option>
+                              <option value="En proceso">En proceso</option>
+                              <option value="Esperando Repuesto">Esperando Repuesto</option>
+                              <option value="Entregado">Entregado</option>
+                            </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" asp-page-handler="Add">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

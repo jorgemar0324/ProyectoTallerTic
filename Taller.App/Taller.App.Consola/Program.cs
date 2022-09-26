@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 using Taller.App.Dominio.Entidades;
-using Taller.App.Persistencia.Repositorios;
+using Taller.App.Persistencia;
 
 namespace Taller.App.Consola
 {
@@ -10,27 +10,27 @@ namespace Taller.App.Consola
     {
         private static RepositorioMecanico Repositorio = new RepositorioMecanico
         (
-            new Persistencia.AppRepositorios.AppContex()
+            new Persistencia.AppContex()
         );
 
         private static RepositorioPropietario RepositorioPropietario = new RepositorioPropietario
         (
-            new Persistencia.AppRepositorios.AppContex()
+            new Persistencia.AppContex()
         );
 
         private static RepositorioVehiculo RepositorioVehiculo = new RepositorioVehiculo
         (
-            new Persistencia.AppRepositorios.AppContex()
+            new Persistencia.AppContex()
         );
 
         private static RepositorioRepuesto RepositorioRepuesto = new RepositorioRepuesto
         (
-            new Persistencia.AppRepositorios.AppContex()
+            new Persistencia.AppContex()
         );
 
         private static RepositorioRevision RepositorioRevision = new RepositorioRevision
         (
-            new Persistencia.AppRepositorios.AppContex()
+            new Persistencia.AppContex()
         );
 
         static void Main(string[] args)
@@ -39,18 +39,18 @@ namespace Taller.App.Consola
         {    //-----------------------Mecanico-------------------------------
 
             //AgregarMecanico();
-            //EditarMeceanico();
+            //EditarMecanico("1");
             //ObtenerMecanicos();
-            //BuscarMecanico("6549007");
+            //BuscarMecanico("1");
             //EliminarMecanico("6549007");
 
             // -------------------------Propietario---------------------------
 
             //AgregarPropietario();
-            //EditarPropietario();
+            //EditarPropietario("1");
             //ObtenerPropietarios();
-            //BuscarPropietario("11223344558");
-            //EliminarPropietario("11223344558");s
+            // BuscarPropietario("1");
+            //EliminarPropietario("1");
 
             //--------------------------Vehiculo-------------------------------
 
@@ -63,8 +63,15 @@ namespace Taller.App.Consola
 
             //---------------------------Repuesto-----------------------------------
 
-            //AgregarRepuesto();
-            AgregarRevision();
+            AgregarRepuesto();
+            //ObtenerRepuesto();
+            //EliminarRepuesto("0002");
+
+            //---------------------------Revision-----------------------------------
+            //AgregarRevision();
+            //EditarRevision();
+            //ObtenerRevision();
+            //EliminarRevision("3");
         }
 
         //--------------------------------------------------------------------------------------------
@@ -75,15 +82,15 @@ namespace Taller.App.Consola
         {
             var mecanico = new Mecanico
             {
-                Id = "6549009",
-                Nombre = "Andres",
-                Apellido = "Zuluaga",
-                Telefono ="3135436789",
-                FechaNacimiento = new DateTime(1996,05,26),
-                Correo = "az8908@hotmail",
-                Contrasenia = "Az345",
+                Id = "1",
+                Nombre = "Carlos",
+                Apellido = "Toro",
+                Telefono = "45456355365",
+                FechaNacimiento = new DateTime(1994, 05, 26),
+                Correo = "lmarin@gmaill",
+                Contrasenia = "gsdfgadsfv",
                 Ciudad = "Cali",
-                NivelEstudio = "Tecnico",
+                NivelEstudio = "Tecnólogo",
             };
             Repositorio.AgregarMecanico(mecanico);
         }
@@ -93,7 +100,7 @@ namespace Taller.App.Consola
             foreach (var m in Repositorio.ObtenerMecanicos())
             {
                 Console.WriteLine("-------------------");
-                Console.WriteLine("Nombre "+ m.Nombre + "\nTelefono "+ m.Telefono);
+                Console.WriteLine("Nombre " + m.Nombre + "\nId " + m.Id);
                 Console.WriteLine("---------------------");
             }
         }
@@ -101,13 +108,13 @@ namespace Taller.App.Consola
         static void BuscarMecanico(string Id)
         {
             var m = Repositorio.BuscarMecanico(Id);
-            if(m != null)
+            if (m != null)
             {
-                Console.WriteLine("Se encontró " + m.Nombre +" "+ m.Apellido + "\n de "+ m.Ciudad);
+                Console.WriteLine("Se encontró " + m.Nombre + " " + m.Apellido + "\n de " + m.Ciudad);
             }
             else
             {
-                Console.WriteLine("No se encontró Mecanico: "+ Id );
+                Console.WriteLine("No se encontró Mecanico: " + Id);
             }
         }
 
@@ -116,25 +123,25 @@ namespace Taller.App.Consola
             Repositorio.EliminarMecanico(Id);
         }
 
-        static void EditarMeceanico()
+        static void EditarMecanico(string id)
         {
             var mecanico = new Mecanico
             {
-               Id = "6549008",
+                Id = "1",
                 Nombre = "Jefry",
                 Apellido = "Rivera",
-                Telefono ="3034567867",
-                FechaNacimiento = new DateTime(1999,03,06),
+                Telefono = "3034567867",
+                FechaNacimiento = new DateTime(1999, 03, 06),
                 Correo = "Jefri@gmail",
                 Contrasenia = "jr567",
                 Ciudad = "Rosas Cauca",
                 NivelEstudio = "Tecnologo",
             };
-            Repositorio.EditarMeceanico(mecanico);
+            Repositorio.EditarMecanico(mecanico);
         }
-        
-    
-    
+
+
+
 
         // ----------------------------------------------------------------------------------------------
 
@@ -142,29 +149,29 @@ namespace Taller.App.Consola
 
         //-----------------------------------------------------------------------------------------------
 
-         static void AgregarPropietario()
-         {
+        static void AgregarPropietario()
+        {
             var propietario = new Propietario
             {
-                Id = "11223344558",
-                Nombre = "Sandra",
-                Apellido ="Bravo",
-                Telefono = "3018887632",
-                FechaNacimiento = new DateTime(1888,2,27),
-                Correo ="SBravis@gmail",
-                Contrasenia = "SAMI49302",
-                Ciudad = "Cucuta",
-                Direccion = "Av Jimenez",
+                Id = "1020",
+                Nombre = "Julio",
+                Apellido = "Jimenez",
+                Telefono = "30535305",
+                FechaNacimiento = new DateTime(1980, 01, 26),
+                Correo = "jg@gmail",
+                Contrasenia = "12345",
+                Ciudad = "Bogota",
+                Direccion = "Cra 98 55a",
             };
             RepositorioPropietario.AgregarPropietario(propietario);
-         }
+        }
 
-         static void ObtenerPropietarios()
+        static void ObtenerPropietarios()
         {
             foreach (var p in RepositorioPropietario.ObtenerPropietario())
             {
                 Console.WriteLine("-------------------");
-                Console.WriteLine("Nombre "+ p.Nombre + "\nTelefono "+ p.Telefono);
+                Console.WriteLine("Nombre " + p.Nombre + "\nTelefono " + p.Telefono);
                 Console.WriteLine("---------------------");
             }
         }
@@ -172,13 +179,13 @@ namespace Taller.App.Consola
         static void BuscarPropietario(string Id)
         {
             var p = RepositorioPropietario.BuscarPropietario(Id);
-            if(p!= null)
+            if (p != null)
             {
-                Console.WriteLine("Se encontró " + p.Nombre +" "+ p.Apellido + "\n de "+ p.Ciudad);
+                Console.WriteLine("Se encontró " + p.Nombre + " " + p.Apellido + "\n de " + p.Ciudad);
             }
             else
             {
-                Console.WriteLine("No se encontró Propietario: "+ Id);
+                Console.WriteLine("No se encontró Propietario: " + Id);
             }
         }
 
@@ -187,15 +194,15 @@ namespace Taller.App.Consola
             RepositorioPropietario.EliminarPropietario(Id);
         }
 
-        static void EditarPropietario()
+        static void EditarPropietario(string Id)
         {
             var propietario = new Propietario
             {
-                Id = "2",
+                Id = "1",
                 Nombre = "Rigoberto",
                 Apellido = "Madrid",
-                Telefono ="3002423433",
-                FechaNacimiento = new DateTime(1980,05,19),
+                Telefono = "3002423433",
+                FechaNacimiento = new DateTime(1980, 05, 19),
                 Correo = "Rm@hotmail.gmail",
                 Contrasenia = "Madrid321",
                 Ciudad = "Villa Maria",
@@ -211,14 +218,14 @@ namespace Taller.App.Consola
         {
             var vehiculo = new Vehiculo
             {
-                Id = "CUN833",
-                PropietarioId = "112233445",
-                Marca = "Hyunday",
-                Modelo = "2023",
-                Pasajeros = "2",
-                Motor = "V10",
+                Id = "ABC455",
+                PropietarioId = "2",
+                Marca = "Ford",
+                Modelo = "1999",
+                Pasajeros = "8",
+                Motor = "2600",
                 Pais = "EEUU",
-                Descripcion = " 0 Km",
+                Descripcion = "",
             };
             RepositorioVehiculo.AgregarVehiculo(vehiculo);
         }
@@ -228,9 +235,9 @@ namespace Taller.App.Consola
             foreach (var v in RepositorioVehiculo.ObtenerVehiculo())
             {
                 Console.WriteLine("-----------------");
-                Console.WriteLine("Vehiculo: "+ v.Marca + "\nModelo: "+ v.Modelo+"\nPropietario: "+ v.PropietarioId);
-                Console.WriteLine("------------------");           
-             }
+                Console.WriteLine("Vehiculo: " + v.Marca + "\nModelo: " + v.Modelo + "\nPropietario: " + v.PropietarioId);
+                Console.WriteLine("------------------");
+            }
         }
 
 
@@ -240,7 +247,7 @@ namespace Taller.App.Consola
             if (v != null)
 
             {
-                Console.WriteLine("Se encontró el vehiculo: " + v.Marca +" "+ v.Modelo + "\nPropietario: "+ v.PropietarioId);
+                Console.WriteLine("Se encontró el vehiculo: " + v.Marca + " " + v.Modelo + "\nPropietario: " + v.PropietarioId);
             }
             else
             {
@@ -277,15 +284,31 @@ namespace Taller.App.Consola
         {
             var repuesto = new Repuesto
             {
-                Id = "LGTH001-4",
+                Id = "0011",
                 Nombre = "Farola",
                 Marca = "Chevrolet",
                 Caracteristicas = "Farola Chevrolet Aveo",
                 Valor = 340000,
-            
-            
+                RevisionId = "0002"
+
+
             };
             RepositorioRepuesto.AgregarRepuesto(repuesto);
+        }
+
+        static void ObtenerRepuesto()
+         {
+            foreach (var v in RepositorioRepuesto.ObtenerRepuesto())
+            {
+                Console.WriteLine("-----------------");
+                Console.WriteLine("Id Repuesto: " + v.Id + "\nNombre Repuesto: " + v.Nombre + "\nMarca Vehiculo: " + v.Marca);
+                Console.WriteLine("------------------");
+            }
+        }
+
+        static void EliminarRepuesto(string Id)
+        {
+            RepositorioRepuesto.EliminarRepuesto(Id);
         }
 
         //------------------------------------------------------------------------------
@@ -296,18 +319,49 @@ namespace Taller.App.Consola
         {
             var revision = new Revision
             {
+                Id = "003",
+                Observaciones = "Servicio Electrico",
+                Estado = "Pendiente",
+                FechaSolicitud = new DateTime(2022, 09, 22),
+                FechaAgendamiento = new DateTime(2022, 09, 26),
+                FechaEntrega = new DateTime(2022, 09, 30),
+                MecanicoId = "9011",
+                VehiculoId = "CUN828",
+
+
+            };
+            RepositorioRevision.AgregarRevision(revision);
+        }
+
+        static void EditarRevision(string Id)
+        {
+            var revision = new Revision
+            {
                 Id = "004",
                 Observaciones = "Lamina y Pintura",
                 Estado = "Esperando Repuesto",
-                FechaSolicitud = new DateTime(2022,05,03),
-                FechaAgendamiento = new DateTime(2022,05,03),
-                FechaEntrega = new DateTime(2022,05,08),
-                MecanicoAsignado = "6549010",
-                VehiculoAsignado = "CUN830",
-                
-            
+                FechaSolicitud = new DateTime(2022, 05, 03),
+                FechaAgendamiento = new DateTime(2022, 05, 03),
+                FechaEntrega = new DateTime(2022, 05, 08),
+                MecanicoId = "6549010",
+                VehiculoId = "CUN829",
             };
-            RepositorioRevision.AgregarRevision(revision);
+            RepositorioRevision.EditarRevision(revision);
+        }
+
+        static void ObtenerRevision()
+         {
+            foreach (var v in RepositorioRevision.ObtenerRevision())
+            {
+                Console.WriteLine("-----------------");
+                Console.WriteLine("Revision: " + v.Id + "\nMecanico: " + v.MecanicoId + "\nVehiculo: " + v.VehiculoId);
+                Console.WriteLine("------------------");
+            }
+        }
+
+         static void EliminarRevision(string Id)
+        {
+            RepositorioRevision.EliminarRevision(Id);
         }
     }
 

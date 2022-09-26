@@ -4,16 +4,26 @@
 }
 
 <div class="container" aria-label="Basic example">
- 
-<a class="btn btn-primary" role="button">Control citas</a>
-<a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionClientes">Gestión Clientes</a> 
-<a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionMecanico">Gestion Mecanicos</a> 
-<a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionVehiculos">Gestion Vehiculos</a> 
-<a class="btn btn-primary" role="button" >Notificaciones</a>
 
-    <div><br>
-        <h4>Mecánicos</h4>
-    </div>
+    <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionRevisiones">Revisiones</a>
+    <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionClientes">Gestión Clientes</a>
+    <a class="btn btn-warning" role="button" asp-page="/JefeOperaciones/GestionMecanico">Gestion Mecanicos</a>
+    <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionVehiculos">Gestion Vehiculos</a>
+    <a class="btn btn-primary" role="button">Notificaciones</a>
+
+   <div class="text-center"><br>
+    <h2>Mecánicos</h2>
+  </div>
+</div><br>
+
+<div>
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mecanicoModal">
+    Crear Mecanico
+  </button>
+</div><br>
+
+<div></div>
+<input type="text" id="myInput" onkeyup="" placeholder="Buscar por Cedula" title="Type in a name">
 </div><br>
 
 
@@ -34,147 +44,123 @@
                     <th scope="col">Acción</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>75342233</td>
-                    <td>Andres Felipe</td>
-                    <td>Osa Ruiz</td>
-                    <td>Cali</td>
-                    <td>3008704565</td>
-                    <td>afosa@gmail.com</td>
-                    <td>22-10-1991</td>
-                    <td>Tecnico</td>
-                    <td>
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-warning"><span
-                                    class="glyphicon glyphicon-pencil"></span>Editar</a>
-                            <a href="#" class="btn btn-danger"><span
-                                    class="glyphicon glyphicon-pencil"></span>Eliminar</a>
-                        </div>
-                    <td>
 
-                </tr>
-                <tr>
-                    <td>76455934</td>
-                    <td>Pablo</td>
-                    <td>Perez Ruiz</td>
-                    <td>Medellín</td>
-                    <td>3107886523</td>
-                    <td>pperez@gmail.com</td>
-                    <td>02-02-1985</td>
-                    <td>Tecnólogo</td>
-                    <td>
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-warning"><span
-                                    class="glyphicon glyphicon-pencil"></span>Editar</a>
-                            <a href="#" class="btn btn-danger"><span
-                                    class="glyphicon glyphicon-pencil"></span>Eliminar</a>
-                        </div>
-                    </td>
-                </tr>
+
+            <tbody>
+                @foreach (var m in Model.listaMecanicos)
+                {
+                    <tr>
+                        <td>@m.Id</td>
+                        <td>@m.Nombre</td>
+                        <td>@m.Apellido</td>
+                        <td>@m.Ciudad</td>
+                        <td>@m.Telefono</td>
+                        <td>@m.Correo</td>
+                        <td>@m.FechaNacimiento</td>
+                        <td>@m.NivelEstudio</td>
+                        <td>
+                            <div class="btn-group">
+                                <form method="POST">
+                                    <a href="#" class="btn btn-warning"><span
+                                        class="glyphicon glyphicon-pencil"></span>Editar</a>
+                                </form>
+                                <form method="POST">
+                                    <button class="btn btn-danger" title="Eliminar mecánico" type="submit" asp-route-id="@m.Id"
+                                    asp-page-handler="Del">Eliminar</button>
+                                </form>
+                            </div>
+                        <td>
+                    </tr>
+                }
+
             </tbody>
         </table>
     </div>
-</div><br><br><br>
-
-<div>
-    <h5>Registrar Nuevo Mecanico</h5><br>
-</div><br>
-
-<form>
-
-    <div class="mb-3 row">
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Id Mecanico :</label>
-            <div class="col">
-                <input type="number" class="form-control" required="">
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Nombres :</label>
-            <div class="col">
-                <input type="text" class="form-control" required="">
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Apellidos :</label>
-            <div class="col">
-                <input type="text" class="form-control" required="">
-            </div>
-        </div>
-    </div>
-
-    <div class="mb-3 row">
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Ciudad :</label>
-            <div class="col">
-                <select class="form-control">
-                    <option>Armenia</option>
-                    <option>Barranquilla</option>
-                    <option>Bogotá</option>
-                    <option>Cali</option>
-                    <option>Manizales</option>
-                    <option>Medellín</option>
-                    <option>Pasto</option>
-                    <option>Pereira</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Teléfono :</label>
-            <div class="col">
-                <input type="number" class="form-control" required="">
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Correo :</label>
-            <div class="col">
-                <input type="email" class="form-control" required="" value="email@example.com">
-            </div>
-        </div>
-
-    </div>
-
-    <div class="mb-3 row">
-
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Fecha Nacimiento :</label>
-            <div class="col">
-                <input type="date" class="form-control" required="">
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="col-md-4 control-label" for="Nombre">Nivel Academico :</label>
-            <div class="col">
-                <select class="form-control">
-                    <option>Bachiller</option>
-                    <option>Técnico</option>
-                    <option>Tecnólogo</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="col" for="Nombre">Asignar Contraseña :</label>
-            <div class="col">
-                <input type="password" class="form-control" required="">
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-
-</form>
-
-<br>
-<div class="container">
-    <a Href="#" class="btn btn-success" role="button">Guardar</a>
 </div>
+
+
+
+<div class="modal fade" id="mecanicoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Mecanico</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="px-4" method="POST">
+
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Id:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.Id" name="Id">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.Nombre" name="Nombre">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Apellido:</label>
+                            <input type="tel" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.Apellido" name="Apellido">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Ciudad:</label>
+                            <select class="form-select" asp-for="@Model.mecanicoActual.Ciudad" name="Ciudad" >
+                              <option value="Armenia">Armenia</option>
+                              <option value="Bogota">Bogotá</option>
+                              <option value="Cali">Cali</option>
+                              <option value="Manizales">Manizales</option>
+                              <option value="Medellin">Medellín</option>
+                              <option value="Pasto">Pasto</option>
+                              <option value="Pereira">Pereira</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Teléfono:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.Telefono" name="Telefono">
+                        </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Correo:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.Correo" name="Correo">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Fecha Nacimiento:</label>
+                            <input type="date" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.FechaNacimiento" name="FechaNacimiento">
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Nivel Estudio:</label>
+                            <select class="form-select" asp-for="@Model.mecanicoActual.NivelEstudio" name="NivelEstudio" >
+                              <option value="Bachiller">Bachiller</option>
+                              <option value="Técnico">Técnico</option>
+                              <option value="Tecnólogo">Tecnólogo</option>
+                              <option value="Profesional">Profesional</option>
+                            </select>
+                        </div>
+                            <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Contraseña:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.mecanicoActual.Contrasenia" name="Contrasenia">
+                        </div>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" asp-page-handler="Add">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

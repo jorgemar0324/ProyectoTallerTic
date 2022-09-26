@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Taller.App.Persistencia.AppRepositorios;
+using Taller.App.Persistencia;
 
 #nullable disable
 
@@ -121,10 +121,16 @@ namespace Taller.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("RevisionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<double>("Valor")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RevisionId");
 
                     b.ToTable("Repuestos");
                 });
@@ -147,7 +153,7 @@ namespace Taller.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaSolicitud")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MecanicoAsignado")
+                    b.Property<string>("MecanicoId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -155,25 +161,15 @@ namespace Taller.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RepuestoAsignado")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RepuestoId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("VehiculoAsignado")
+                    b.Property<string>("VehiculoId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MecanicoAsignado");
+                    b.HasIndex("MecanicoId");
 
-                    b.HasIndex("RepuestoId");
-
-                    b.HasIndex("VehiculoAsignado");
+                    b.HasIndex("VehiculoId");
 
                     b.ToTable("Revisiones");
                 });
@@ -218,29 +214,32 @@ namespace Taller.App.Persistencia.Migrations
                     b.ToTable("Vehiculos");
                 });
 
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Repuesto", b =>
+                {
+                    b.HasOne("Taller.App.Dominio.Entidades.Revision", "Revision")
+                        .WithMany("Repuestos")
+                        .HasForeignKey("RevisionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Revision");
+                });
+
             modelBuilder.Entity("Taller.App.Dominio.Entidades.Revision", b =>
                 {
                     b.HasOne("Taller.App.Dominio.Entidades.Mecanico", "Mecanico")
                         .WithMany("Revisiones")
-                        .HasForeignKey("MecanicoAsignado")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Taller.App.Dominio.Entidades.Repuesto", "Repuesto")
-                        .WithMany("Revisiones")
-                        .HasForeignKey("RepuestoId")
+                        .HasForeignKey("MecanicoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Taller.App.Dominio.Entidades.Vehiculo", "Vehiculo")
                         .WithMany("Revisiones")
-                        .HasForeignKey("VehiculoAsignado")
+                        .HasForeignKey("VehiculoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Mecanico");
-
-                    b.Navigation("Repuesto");
 
                     b.Navigation("Vehiculo");
                 });
@@ -266,9 +265,9 @@ namespace Taller.App.Persistencia.Migrations
                     b.Navigation("Vehiculos");
                 });
 
-            modelBuilder.Entity("Taller.App.Dominio.Entidades.Repuesto", b =>
+            modelBuilder.Entity("Taller.App.Dominio.Entidades.Revision", b =>
                 {
-                    b.Navigation("Revisiones");
+                    b.Navigation("Repuestos");
                 });
 
             modelBuilder.Entity("Taller.App.Dominio.Entidades.Vehiculo", b =>

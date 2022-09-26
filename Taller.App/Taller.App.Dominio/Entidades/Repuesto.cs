@@ -14,7 +14,10 @@ namespace Taller.App.Dominio.Entidades
 
 
 
-        public List<Revision> Revisiones {get; set;}
+        public Revision Revision {get; set;}
+        public string RevisionId {get; set;}
+
+    
        
 
         

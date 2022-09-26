@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Taller.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class _250922AZ : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,21 +48,6 @@ namespace Taller.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Repuestos",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Marca = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Caracteristicas = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Valor = table.Column<double>(type: "float", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Repuestos", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Vehiculos",
                 columns: table => new
                 {
@@ -96,48 +81,62 @@ namespace Taller.App.Persistencia.Migrations
                     FechaSolicitud = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaAgendamiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaEntrega = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MecanicoAsignado = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    VehiculoAsignado = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    RepuestoId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    RepuestoAsignado = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    MecanicoId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    VehiculoId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Revisiones", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Revisiones_Mecanicos_MecanicoAsignado",
-                        column: x => x.MecanicoAsignado,
+                        name: "FK_Revisiones_Mecanicos_MecanicoId",
+                        column: x => x.MecanicoId,
                         principalTable: "Mecanicos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Revisiones_Repuestos_RepuestoId",
-                        column: x => x.RepuestoId,
-                        principalTable: "Repuestos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Revisiones_Vehiculos_VehiculoAsignado",
-                        column: x => x.VehiculoAsignado,
+                        name: "FK_Revisiones_Vehiculos_VehiculoId",
+                        column: x => x.VehiculoId,
                         principalTable: "Vehiculos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Revisiones_MecanicoAsignado",
-                table: "Revisiones",
-                column: "MecanicoAsignado");
+            migrationBuilder.CreateTable(
+                name: "Repuestos",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Marca = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Caracteristicas = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Valor = table.Column<double>(type: "float", nullable: false),
+                    RevisionId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Repuestos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Repuestos_Revisiones_RevisionId",
+                        column: x => x.RevisionId,
+                        principalTable: "Revisiones",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Revisiones_RepuestoId",
-                table: "Revisiones",
-                column: "RepuestoId");
+                name: "IX_Repuestos_RevisionId",
+                table: "Repuestos",
+                column: "RevisionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Revisiones_VehiculoAsignado",
+                name: "IX_Revisiones_MecanicoId",
                 table: "Revisiones",
-                column: "VehiculoAsignado");
+                column: "MecanicoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Revisiones_VehiculoId",
+                table: "Revisiones",
+                column: "VehiculoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Vehiculos_PropietarioId",
@@ -148,13 +147,13 @@ namespace Taller.App.Persistencia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Repuestos");
+
+            migrationBuilder.DropTable(
                 name: "Revisiones");
 
             migrationBuilder.DropTable(
                 name: "Mecanicos");
-
-            migrationBuilder.DropTable(
-                name: "Repuestos");
 
             migrationBuilder.DropTable(
                 name: "Vehiculos");

@@ -5,19 +5,26 @@
 
 <div class="container" aria-label="Basic example">
 
-  <a class="btn btn-primary" role="button">Control citas</a>
+  <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionRevisiones">Revisiones</a>
   <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionClientes">Gestión Clientes</a>
   <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionMecanico">Gestion Mecanicos</a>
-  <a class="btn btn-primary" role="button" asp-page="/JefeOperaciones/GestionVehiculos">Gestion Vehiculos</a>
+  <a class="btn btn-warning" role="button" asp-page="/JefeOperaciones/GestionVehiculos">Gestion Vehiculos</a>
   <a class="btn btn-primary" role="button">Notificaciones</a>
 
-  <div><br>
-    <h4>Vehiculos</h4>
+   <div class="text-center"><br>
+    <h2>Vehículos</h2>
   </div>
 </div><br>
 
-<input type="text" id="myInput" onkeyup="" placeholder="Buscar por placa" title="Type in a name">
-<br>
+<div>
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vehiculoModal">
+    Crear Vehículos
+  </button>
+</div><br>
+
+<div></div>
+<input type="text" id="myInput" onkeyup="" placeholder="Buscar por Placa" title="Type in a name">
+</div><br>
 
 
 <div class="container">
@@ -26,453 +33,153 @@
     <table class="table table-bordred table-striped" data-search="true">
       <thead>
         <tr>
-          <th scope="col">Id Propierario</th>
-          <th scope="col">Nombre Propierario</th>
-          <th scope="col">Apellido Propierario</th>
+          <th scope="col">Id Propietario</th>
           <th scope="col">Placa</th>
           <th scope="col">Marca</th>
           <th scope="col">Modelo</th>
-          <th scope="col">Tipo Vehiculo</th>
           <th scope="col">Pasajeros</th>
           <th scope="col">Cilindraje</th>
           <th scope="col">Pais Origen</th>
+          <th scope="col">Descripción</th>
           <th scope="col">Acción</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>8204242</td>
-          <td>Andres</td>
-          <td>Rodriguez</td>
-          <td>ABB344</td>
-          <td>Mazda</td>
-          <td>2015</td>
-          <td>Automovil</td>
-          <td>5</td>
-          <td>2000</td>
-          <td>Mexico</td>
-          <td>
-            <div class="btn-group">
-              <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
-              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
-            </div>
-          <td>
-        </tr>
-        <tr>
-          <td>75455234</td>
-          <td>Juan</td>
-          <td>Perez</td>
-          <td>ACX8757</td>
-          <td>Ford</td>
-          <td>2020</td>
-          <td>Automovil</td>
-          <td>5</td>
-          <td>1600</td>
-          <td>Estados Unidos</td>
-          <td>
-            <div class="btn-group">
-              <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
-              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
-            </div>
-          <td>
-        </tr>
-        <tr>
-          <td>10356743</td>
-          <td>Alejandra</td>
-          <td>Marin</td>
-          <td>WQA7349</td>
-          <td>Fiat</td>
-          <td>2014</td>
-          <td>Automovil</td>
-          <td>5</td>
-          <td>1400</td>
-          <td>Brasil</td>
-          <td>
-            <div class="btn-group">
-              <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
-              <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span>Eliminar</a>
-            </div>
-          <td>
-        </tr>
-      </tbody>
+            <tbody>
+                @foreach (var v in Model.listaVehiculos)
+                {
+                    <tr>
+                        <td>@v.PropietarioId</td>
+                        <td>@v.Id</td>
+                        <td>@v.Marca</td>
+                        <td>@v.Modelo</td>
+                        <td>@v.Pasajeros</td>
+                        <td>@v.Motor</td>
+                        <td>@v.Pais</td>
+                        <td>@v.Descripcion</td>
+                        <td>
+                            <div class="btn-group">
+                                <form method="POST">
+                                    <a href="#" class="btn btn-warning"><span
+                                        class="glyphicon glyphicon-pencil"></span>Editar</a>
+                                </form>
+                                <form method="POST">
+                                    <button class="btn btn-danger" title="Eliminar Vehiculo" type="submit" asp-route-id="@v.Id"
+                                    asp-page-handler="Del">Eliminar</button>
+                                </form>
+                            </div>
+                        <td>
+                    </tr>
+                }
+            <tbody>
     </table>
   </div>
-</div><br><br><br>
-
-<div>
-  <h5>Registrar Nuevo Vehiculo</h5><br>
-</div><br>
-
-<form>
-
-  <div class="mb-3 row">
-    <div class="col">
-      <label class="col-md-4 control-label" for="Nombre">Id Propietario :</label>
-      <div class="col">
-        <input type="number" class="form-control" required="">
-      </div>
-    </div>
-    <div class="col">
-      <label class="col-md-4 control-label" for="Nombre">Marca :</label>
-      <div class="col">
-        <select class="form-select" required="">
-          <option>Audi</option>
-          <option>BMW</option>
-          <option>Buick</option>
-          <option>BYD</option>
-          <option>Chery</option>
-          <option>Chevrolet</option>
-          <option>Citroen</option>
-          <option>Daihatsu</option>
-          <option>Dodge</option>
-          <option>Fiat</option>
-          <option>Ford</option>
-          <option>Foton</option>
-          <option>GMC</option>
-          <option>Honda</option>
-          <option>Hyundai</option>
-          <option>Isuzu</option>
-          <option>JAC</option>
-          <option>Jeep</option>
-          <option>Kia</option>
-          <option>Land Rover</option>
-          <option>Mazda</option>
-          <option>Mercedes-Benz</option>
-          <option>MINI</option>
-          <option>Mitsubishi</option>
-          <option>Nissan</option>
-          <option>Opel</option>
-          <option>Peugeot</option>
-          <option>Ram</option>
-          <option>Renault</option>
-          <option>SEAT</option>
-          <option>Skoda</option>
-          <option>Subaru</option>
-          <option>Suzuki</option>
-          <option>Toyota</option>
-          <option>Volkswagen</option>
-          <option>Volvo</option>
-        </select>
-      </div>
-    </div>
-    <div class="col">
-      <label class="col-md-4 control-label" for="Nombre">Modelo :</label>
-      <div class="col">
-        <select class="form-select" required="">
-          <option>1990</option>
-          <option>1991</option>
-          <option>1992</option>
-          <option>1993</option>
-          <option>1994</option>
-          <option>1995</option>
-          <option>1996</option>
-          <option>1997</option>
-          <option>1998</option>
-          <option>1999</option>
-          <option>2000</option>
-          <option>2001</option>
-          <option>2002</option>
-          <option>2003</option>
-          <option>2004</option>
-          <option>2005</option>
-          <option>2006</option>
-          <option>2007</option>
-          <option>2008</option>
-          <option>2009</option>
-          <option>2010</option>
-          <option>2011</option>
-          <option>2012</option>
-          <option>2013</option>
-          <option>2014</option>
-          <option>2015</option>
-          <option>2016</option>
-          <option>2017</option>
-          <option>2018</option>
-          <option>2019</option>
-          <option>2020</option>
-          <option>2021</option>
-          <option>2022</option>
-
-        </select>
-      </div>
-    </div>
-  </div>
-
-  <div class="mb-3 row">
-    <div class="col">
-      <label class="col-md-4 control-label" for="Nombre">Tipo Vehiculo :</label>
-      <div class="col">
-        <select class="form-select" required="">
-          <option>Automovil</option>
-          <option>Camioneta</option>
-          <option>Microbus</option>
-          <option>Buseta</option>
-        </select>
-      </div>
-    </div>
-    <div class="col">
-      <label class="col-md-4 control-label" for="Nombre">Pasajeros :</label>
-      <div class="col">
-        <input type="number" class="form-control" required="">
-      </div>
-    </div>
-    <div class="col">
-      <label class="col-md-4 control-label" for="Nombre">Cilindraje :</label>
-      <div class="col">
-        <input type="number" class="form-control" required="">
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <label class="col-md-4 control-label" for="Nombre">Pais Origen :</label>
-    <div class="col-md-4">
-      <select class="form-select" required="">
-        <option value="AF">Afganistán</option>
-        <option value="AL">Albania</option>
-        <option value="DE">Alemania</option>
-        <option value="AD">Andorra</option>
-        <option value="AO">Angola</option>
-        <option value="AI">Anguilla</option>
-        <option value="AQ">Antártida</option>
-        <option value="AG">Antigua y Barbuda</option>
-        <option value="AN">Antillas Holandesas</option>
-        <option value="SA">Arabia Saudí</option>
-        <option value="DZ">Argelia</option>
-        <option value="AR">Argentina</option>
-        <option value="AM">Armenia</option>
-        <option value="AW">Aruba</option>
-        <option value="AU">Australia</option>
-        <option value="AT">Austria</option>
-        <option value="AZ">Azerbaiyán</option>
-        <option value="BS">Bahamas</option>
-        <option value="BH">Bahrein</option>
-        <option value="BD">Bangladesh</option>
-        <option value="BB">Barbados</option>
-        <option value="BE">Bélgica</option>
-        <option value="BZ">Belice</option>
-        <option value="BJ">Benin</option>
-        <option value="BM">Bermudas</option>
-        <option value="BY">Bielorrusia</option>
-        <option value="MM">Birmania</option>
-        <option value="BO">Bolivia</option>
-        <option value="BA">Bosnia y Herzegovina</option>
-        <option value="BW">Botswana</option>
-        <option value="BR">Brasil</option>
-        <option value="BN">Brunei</option>
-        <option value="BG">Bulgaria</option>
-        <option value="BF">Burkina Faso</option>
-        <option value="BI">Burundi</option>
-        <option value="BT">Bután</option>
-        <option value="CV">Cabo Verde</option>
-        <option value="KH">Camboya</option>
-        <option value="CM">Camerún</option>
-        <option value="CA">Canadá</option>
-        <option value="TD">Chad</option>
-        <option value="CL">Chile</option>
-        <option value="CN">China</option>
-        <option value="CY">Chipre</option>
-        <option value="VA">Ciudad del Vaticano (Santa Sede)</option>
-        <option value="CO">Colombia</option>
-        <option value="KM">Comores</option>
-        <option value="CG">Congo</option>
-        <option value="CD">Congo, República Democrática del</option>
-        <option value="KR">Corea</option>
-        <option value="KP">Corea del Norte</option>
-        <option value="CI">Costa de Marfíl</option>
-        <option value="CR">Costa Rica</option>
-        <option value="HR">Croacia (Hrvatska)</option>
-        <option value="CU">Cuba</option>
-        <option value="DK">Dinamarca</option>
-        <option value="DJ">Djibouti</option>
-        <option value="DM">Dominica</option>
-        <option value="EC">Ecuador</option>
-        <option value="EG">Egipto</option>
-        <option value="SV">El Salvador</option>
-        <option value="AE">Emiratos Árabes Unidos</option>
-        <option value="ER">Eritrea</option>
-        <option value="SI">Eslovenia</option>
-        <option value="ES" selected>España</option>
-        <option value="US">Estados Unidos</option>
-        <option value="EE">Estonia</option>
-        <option value="ET">Etiopía</option>
-        <option value="FJ">Fiji</option>
-        <option value="PH">Filipinas</option>
-        <option value="FI">Finlandia</option>
-        <option value="FR">Francia</option>
-        <option value="GA">Gabón</option>
-        <option value="GM">Gambia</option>
-        <option value="GE">Georgia</option>
-        <option value="GH">Ghana</option>
-        <option value="GI">Gibraltar</option>
-        <option value="GD">Granada</option>
-        <option value="GR">Grecia</option>
-        <option value="GL">Groenlandia</option>
-        <option value="GP">Guadalupe</option>
-        <option value="GU">Guam</option>
-        <option value="GT">Guatemala</option>
-        <option value="GY">Guayana</option>
-        <option value="GF">Guayana Francesa</option>
-        <option value="GN">Guinea</option>
-        <option value="GQ">Guinea Ecuatorial</option>
-        <option value="GW">Guinea-Bissau</option>
-        <option value="HT">Haití</option>
-        <option value="HN">Honduras</option>
-        <option value="HU">Hungría</option>
-        <option value="IN">India</option>
-        <option value="ID">Indonesia</option>
-        <option value="IQ">Irak</option>
-        <option value="IR">Irán</option>
-        <option value="IE">Irlanda</option>
-        <option value="BV">Isla Bouvet</option>
-        <option value="CX">Isla de Christmas</option>
-        <option value="IS">Islandia</option>
-        <option value="KY">Islas Caimán</option>
-        <option value="CK">Islas Cook</option>
-        <option value="CC">Islas de Cocos o Keeling</option>
-        <option value="FO">Islas Faroe</option>
-        <option value="HM">Islas Heard y McDonald</option>
-        <option value="FK">Islas Malvinas</option>
-        <option value="MP">Islas Marianas del Norte</option>
-        <option value="MH">Islas Marshall</option>
-        <option value="UM">Islas menores de Estados Unidos</option>
-        <option value="PW">Islas Palau</option>
-        <option value="SB">Islas Salomón</option>
-        <option value="SJ">Islas Svalbard y Jan Mayen</option>
-        <option value="TK">Islas Tokelau</option>
-        <option value="TC">Islas Turks y Caicos</option>
-        <option value="VI">Islas Vírgenes (EEUU)</option>
-        <option value="VG">Islas Vírgenes (Reino Unido)</option>
-        <option value="WF">Islas Wallis y Futuna</option>
-        <option value="IL">Israel</option>
-        <option value="IT">Italia</option>
-        <option value="JM">Jamaica</option>
-        <option value="JP">Japón</option>
-        <option value="JO">Jordania</option>
-        <option value="KZ">Kazajistán</option>
-        <option value="KE">Kenia</option>
-        <option value="KG">Kirguizistán</option>
-        <option value="KI">Kiribati</option>
-        <option value="KW">Kuwait</option>
-        <option value="LA">Laos</option>
-        <option value="LS">Lesotho</option>
-        <option value="LV">Letonia</option>
-        <option value="LB">Líbano</option>
-        <option value="LR">Liberia</option>
-        <option value="LY">Libia</option>
-        <option value="LI">Liechtenstein</option>
-        <option value="LT">Lituania</option>
-        <option value="LU">Luxemburgo</option>
-        <option value="MK">Macedonia, Ex-República Yugoslava de</option>
-        <option value="MG">Madagascar</option>
-        <option value="MY">Malasia</option>
-        <option value="MW">Malawi</option>
-        <option value="MV">Maldivas</option>
-        <option value="ML">Malí</option>
-        <option value="MT">Malta</option>
-        <option value="MA">Marruecos</option>
-        <option value="MQ">Martinica</option>
-        <option value="MU">Mauricio</option>
-        <option value="MR">Mauritania</option>
-        <option value="YT">Mayotte</option>
-        <option value="MX">México</option>
-        <option value="FM">Micronesia</option>
-        <option value="MD">Moldavia</option>
-        <option value="MC">Mónaco</option>
-        <option value="MN">Mongolia</option>
-        <option value="MS">Montserrat</option>
-        <option value="MZ">Mozambique</option>
-        <option value="NA">Namibia</option>
-        <option value="NR">Nauru</option>
-        <option value="NP">Nepal</option>
-        <option value="NI">Nicaragua</option>
-        <option value="NE">Níger</option>
-        <option value="NG">Nigeria</option>
-        <option value="NU">Niue</option>
-        <option value="NF">Norfolk</option>
-        <option value="NO">Noruega</option>
-        <option value="NC">Nueva Caledonia</option>
-        <option value="NZ">Nueva Zelanda</option>
-        <option value="OM">Omán</option>
-        <option value="NL">Países Bajos</option>
-        <option value="PA">Panamá</option>
-        <option value="PG">Papúa Nueva Guinea</option>
-        <option value="PK">Paquistán</option>
-        <option value="PY">Paraguay</option>
-        <option value="PE">Perú</option>
-        <option value="PN">Pitcairn</option>
-        <option value="PF">Polinesia Francesa</option>
-        <option value="PL">Polonia</option>
-        <option value="PT">Portugal</option>
-        <option value="PR">Puerto Rico</option>
-        <option value="QA">Qatar</option>
-        <option value="UK">Reino Unido</option>
-        <option value="CF">República Centroafricana</option>
-        <option value="CZ">República Checa</option>
-        <option value="ZA">República de Sudáfrica</option>
-        <option value="DO">República Dominicana</option>
-        <option value="SK">República Eslovaca</option>
-        <option value="RE">Reunión</option>
-        <option value="RW">Ruanda</option>
-        <option value="RO">Rumania</option>
-        <option value="RU">Rusia</option>
-        <option value="EH">Sahara Occidental</option>
-        <option value="KN">Saint Kitts y Nevis</option>
-        <option value="WS">Samoa</option>
-        <option value="AS">Samoa Americana</option>
-        <option value="SM">San Marino</option>
-        <option value="VC">San Vicente y Granadinas</option>
-        <option value="SH">Santa Helena</option>
-        <option value="LC">Santa Lucía</option>
-        <option value="ST">Santo Tomé y Príncipe</option>
-        <option value="SN">Senegal</option>
-        <option value="SC">Seychelles</option>
-        <option value="SL">Sierra Leona</option>
-        <option value="SG">Singapur</option>
-        <option value="SY">Siria</option>
-        <option value="SO">Somalia</option>
-        <option value="LK">Sri Lanka</option>
-        <option value="PM">St Pierre y Miquelon</option>
-        <option value="SZ">Suazilandia</option>
-        <option value="SD">Sudán</option>
-        <option value="SE">Suecia</option>
-        <option value="CH">Suiza</option>
-        <option value="SR">Surinam</option>
-        <option value="TH">Tailandia</option>
-        <option value="TW">Taiwán</option>
-        <option value="TZ">Tanzania</option>
-        <option value="TJ">Tayikistán</option>
-        <option value="TF">Territorios franceses del Sur</option>
-        <option value="TP">Timor Oriental</option>
-        <option value="TG">Togo</option>
-        <option value="TO">Tonga</option>
-        <option value="TT">Trinidad y Tobago</option>
-        <option value="TN">Túnez</option>
-        <option value="TM">Turkmenistán</option>
-        <option value="TR">Turquía</option>
-        <option value="TV">Tuvalu</option>
-        <option value="UA">Ucrania</option>
-        <option value="UG">Uganda</option>
-        <option value="UY">Uruguay</option>
-        <option value="UZ">Uzbekistán</option>
-        <option value="VU">Vanuatu</option>
-        <option value="VE">Venezuela</option>
-        <option value="VN">Vietnam</option>
-        <option value="YE">Yemen</option>
-        <option value="YU">Yugoslavia</option>
-        <option value="ZM">Zambia</option>
-        <option value="ZW">Zimbabue</option>
-
-      </select>
-
-    </div>
-  </div>
-  </div>
-
-</form>
-
-<br>
-<div class="container">
-  <a Href="#" class="btn btn-success" role="button">Guardar</a>
 </div>
+
+
+<div class="modal fade" id="vehiculoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Vehiculo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="px-4" method="POST">
+
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Id Propietario:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.vehiculoActual.PropietarioId" name="PropietarioId">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Placa:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.vehiculoActual.Id" name="Id">
+                        </div>                        
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Marca:</label>
+                            <select class="form-select" asp-for="@Model.vehiculoActual.Marca" name="Marca">
+                              <option value="Audi">Audi</option>
+                              <option value="BMW">BMW</option>
+                              <option value="Chevrolet">Chevrolet</option>
+                              <option value="Citroen">Citroen</option>
+                              <option value="Dodge">Dodge</option>
+                              <option value="Fiat">Fiat</option>
+                              <option value="Ford">Ford</option>
+                              <option value="Honda">Honda</option>
+                              <option value="Hyundai">Hyundai</option>
+                              <option value="Kia">Kia</option>
+                              <option value="Mazda">Mazda</option>
+                              <option value="Mercedes-Benz">Mercedes-Benz</option>
+                           </select>
+                        </div>
+
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="recipient-name" class="col-form-label">Modelo:</label>
+                                    <select class="form-select" asp-for="@Model.vehiculoActual.Modelo" name="Modelo">
+                                      <option value="2010">2010</option>
+                                      <option value="2011">2011</option>
+                                      <option value="2012">2012</option>
+                                      <option value="2013">2013</option>
+                                      <option value="2014">2014</option>
+                                      <option value="2015">2015</option>
+                                      <option value="2016">2016</option>
+                                      <option value="2017">2017</option>
+                                      <option value="2018">2018</option>
+                                      <option value="2019">2019</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2021">2021</option>
+                                      <option value="2022">2022</option>
+                                    </select>
+                         </div>                      
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Pasajeros:</label>
+                            <input type="number" class="form-control" id="recipient-name"
+                                asp-for="@Model.vehiculoActual.Pasajeros" name="Pasajeros">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Motor:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.vehiculoActual.Motor" name="Motor">
+                        </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Pais:</label>
+                            <select class="form-select" asp-for="@Model.vehiculoActual.Pais" name="Pais">
+                              <option value="Alemania">Alemania</option>
+                              <option value="Argentina">Argentina</option>
+                              <option value="Australia">Australia</option>
+                              <option value="Brasil">Brasil</option>
+                              <option value="China">China</option>
+                              <option value="Colombia">Colombia</option>
+                              <option value="Ecuador">Ecuador</option>
+                              <option value="España">España</option>
+                              <option value="Estados Unidos">Estados Unidos</option>
+                              <option value="Francia">Francia</option>
+                              <option value="India">India</option>
+                              <option value="Japón">Japón</option>
+                              <option value="México">México</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="recipient-name" class="col-form-label">Descripción:</label>
+                            <input type="text" class="form-control" id="recipient-name"
+                                asp-for="@Model.vehiculoActual.Descripcion" name="Descripcion">
+                        </div>
+                        
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" asp-page-handler="Add">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

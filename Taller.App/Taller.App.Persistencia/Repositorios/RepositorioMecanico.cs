@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Taller.App.Dominio.Entidades;
-using Taller.App.Persistencia.AppRepositorios;
+using Taller.App.Persistencia;
 
-namespace Taller.App.Persistencia.Repositorios
+namespace Taller.App.Persistencia
 {
     public class RepositorioMecanico
     {
         private readonly AppContex appContex;
 
-        public RepositorioMecanico(AppContex contex)
+        public RepositorioMecanico(AppContex appContex)
         {
-            this.appContex = contex;
+            this.appContex = appContex;
         }
         public void AgregarMecanico(Mecanico mecanico)
         {
@@ -71,7 +71,7 @@ namespace Taller.App.Persistencia.Repositorios
             }
         }
 
-        public void EditarMeceanico (Mecanico mec )
+        public void EditarMecanico (Mecanico mec )
         {
             try
             {

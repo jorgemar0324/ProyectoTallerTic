@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Taller.App.Dominio.Entidades;
-using Taller.App.Persistencia.AppRepositorios;
+using Taller.App.Persistencia;
 
-namespace Taller.App.Persistencia.Repositorios
+namespace Taller.App.Persistencia
 {
     public class RepositorioPropietario
     {
